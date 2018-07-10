@@ -19,7 +19,7 @@ class Config(object):
     LINE_SQUARE_QUERY_PATH      = '/SQS1'
 
     CHANNEL_ID = {
-        'LINE_TIMELINE': '1341209950',
+        'LINE_TIMELINE': '1341209850',
         'LINE_WEBTOON': '1401600689',
         'LINE_TODAY': '1518712866',
         'LINE_STORE': '1376922440',
@@ -27,7 +27,7 @@ class Config(object):
         'LINE_SERVICES': '1459630796'
     }
 
-    APP_TYPE    = ApplicationType._VALUES_TO_NAMES[96]
+    APP_TYPE    = 'CHROMEOS\t2.1.0\tWIN10\t10.0.0'
     APP_VER     = '8.0.2'
     CARRIER     = '51089, 1-0'
     SYSTEM_NAME = 'Nadya'
@@ -36,5 +36,5 @@ class Config(object):
     EMAIL_REGEX = re.compile(r"[^@]+@[^@]+\.[^@]+")
 
     def __init__(self):
-        self.APP_NAME = '%s\t%s\t%s\t%s' % (self.APP_TYPE, self.APP_VER, self.SYSTEM_NAME, self.SYSTEM_VER)
+        self.APP_NAME = 'CHROMEOS\t2.1.0\tWIN10\t10.0.0'
         self.USER_AGENT = 'Line/%s' % self.APP_VER
