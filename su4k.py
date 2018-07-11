@@ -288,7 +288,7 @@ def myhelp():
                   "❥「บัญชี」" + "\n" + \
                   "❥「textTospeech」" + "\n" + \
                   "❥「Languange」" + "\n" + \
-                  "❥「Me」" + "\n" + \
+                  "❥「คท」" + "\n" + \
                   "❥「มิส」" + "\n" + \
                   "❥「ชื่อ」" + "\n" + \
                   "❥「ตัส」" + "\n" + \
@@ -663,17 +663,17 @@ def lineBot(op):
                 if text.lower() == 'คำสั่ง':
                     myHelp = myhelp()
                     line.sendMessage(to, str(myHelp))
-                elif text.lower() == 'คำสั่ง4':
+                elif text.lower() == 'คำสั่ง2':
                     helpSet = helpset()
                     line.sendMessage(to, str(helpSet))
                     sendMessageWithMention(to, lineMID)
-                elif text.lower() == 'คำสั่ง2':
+                elif text.lower() == 'คำสั่ง3':
                     helpKicker = helpkicker()
                     line.sendMessage(to, str(helpKicker))
-                elif text.lower() == 'help group':
+                elif text.lower() == 'คำสั่ง4':
                     listGrup = listgrup()
                     line.sendMessage(to, str(listGrup))
-                elif text.lower() == 'คำสั่ง3':
+                elif text.lower() == 'คำสั่ง5':
                     helpSetting = helpsetting()
                     line.sendMessage(to, str(helpSetting))
                 elif text.lower() == 'help media':
@@ -822,7 +822,7 @@ def lineBot(op):
                     settings["checkSticker"] = False
                     line.sendMessage(to, "💙 ปิดเช็คสติ๊กเรียบร้อย..")                
 #==============================================================================#
-                elif text.lower() == 'Me':
+                elif text.lower() == 'คท':
                     sendMessageWithMention(to, lineMID)
                     line.sendContact(to, lineMID)
                 elif text.lower() == 'ผู้สร้าง':
