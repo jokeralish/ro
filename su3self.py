@@ -13,7 +13,7 @@ botStart = time.time()
 
 #nadya = LINE()
 #nadya = LINE("TOKEN KAMU")
-nadya = LINE("su4nu2018@gmail.com","nunu_kap2018")
+nadya = LINE("sunu0734@gmail.com","sunu2018")
 nadya.log("Auth Token : " + str(nadya.authToken))
 channelToken = nadya.getChannelResult()
 nadya.log("Channel Token : " + str(channelToken))
@@ -364,7 +364,7 @@ def lineBot(op):
                 if text.lower() == 'help':
                     helpMessage = helpmessage()
                     nadya.sendMessage(to, str(helpMessage))
-                    nadya.sendContact(to, "u14f64e139a3817afaabe27d237afb36b")
+                    nadya.sendContact(to, "ud3a6bfda60a956cca0f58f2a14bae808")
                 elif text.lower() == 'texttospeech':
                     helpTextToSpeech = helptexttospeech()
                     nadya.sendMessage(to, str(helpTextToSpeech))
@@ -390,7 +390,7 @@ def lineBot(op):
                 elif text.lower() == 'about':
                     try:
                         arr = []
-                        owner = "u14f64e139a3817afaabe27d237afb36b"
+                        owner = "ud3a6bfda60a956cca0f58f2a14bae808"
                         creator = nadya.getContact(owner)
                         contact = nadya.getContact(nadyaMID)
                         grouplist = nadya.getGroupIdsJoined()
