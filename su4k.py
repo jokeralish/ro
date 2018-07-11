@@ -29,7 +29,7 @@ ki = LINE('nunu4844@gmail.com','sunu2018')
 #ki.log("Timeline Token : " + str(ki.tl.channelAccessToken))
 
 #kk = LINE()
-kk = LINE()
+kk = LINE('su6nu2018@gmail.com','sunu2018')
 #kk.log("Auth Token : " + str(kk.authToken))
 #kk.log("Timeline Token : " + str(kk.tl.channelAccessToken))
 
