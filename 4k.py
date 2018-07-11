@@ -24,7 +24,7 @@ line.log("Auth Token : " + str(line.authToken))
 line.log("Timeline Token : " + str(line.tl.channelAccessToken))
 
 #ki = LINE()
-ki = LINE("bot5nu2018@gmail.com","nunu_kap2018')
+ki = LINE("bot5nu2018@gmail.com","nunu_kap2018")
 ki.log("Auth Token : " + str(ki.authToken))
 ki.log("Timeline Token : " + str(ki.tl.channelAccessToken))
 
@@ -3233,7 +3233,7 @@ def lineBot(op):
                     line.sendMessage(msg.to,"ทำการลบัญชีดำทั้งหมดเรียร้อย")
                     print ("Clear Ban")
 
-                elif text.lower() == "ทั้งหมด on':
+                elif text.lower() == "ทั้งหมด on":
                     if msg.toType == 2:
                         group = line.getGroup(to)
                         group.preventedJoinByTicket = False
