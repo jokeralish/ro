@@ -18,13 +18,13 @@ from googletrans import Translator
 #==============================================================================#
 botStart = time.time()
 #==============================================================================#
-line = LINE()
+line = LINE('jon1bot2018@gmail.com','nunu_kap2018)
 #line = LINE()
 line.log("Auth Token : " + str(line.authToken))
 line.log("Timeline Token : " + str(line.tl.channelAccessToken))
 
 #ki = LINE()
-ki = LINE()
+ki = LINE("bot5nu2018@gmail.com","nunu_kap2018)
 ki.log("Auth Token : " + str(ki.authToken))
 ki.log("Timeline Token : " + str(ki.tl.channelAccessToken))
 
