@@ -18,28 +18,28 @@ from googletrans import Translator
 #==============================================================================#
 botStart = time.time()
 #==============================================================================#
-line = LINE('jon1bot2018@gmail.com','nunu_kap2018')
+line = LINE()
 #line = LINE()
 line.log("Auth Token : " + str(line.authToken))
 line.log("Timeline Token : " + str(line.tl.channelAccessToken))
 
 #ki = LINE()
-ki = LINE("bot5nu2018@gmail.com","nunu_kap2018")
+ki = LINE()
 ki.log("Auth Token : " + str(ki.authToken))
 ki.log("Timeline Token : " + str(ki.tl.channelAccessToken))
 
 #kk = LINE()
-kk = LINE('bot1nu2018@gmail.com','nunu_kap2018')
+kk = LINE()
 kk.log("Auth Token : " + str(kk.authToken))
 kk.log("Timeline Token : " + str(kk.tl.channelAccessToken))
 
 #kc = LINE()
-kc = LINE('bot2nu2018@gmail.com','nunu_kap2018')
+kc = LINE()
 kc.log("Auth Token : " + str(kc.authToken))
 kc.log("Timeline Token : " + str(kc.tl.channelAccessToken))
 
 #ke = LINE()
-ke = LINE('bot3nu2018@gmail.com','nunu_kap2018')
+ke = LINE()
 ke.log("Auth Token : " + str(ke.authToken))
 ke.log("Timeline Token : " + str(ke.tl.channelAccessToken))
 
@@ -101,7 +101,7 @@ targets = []
 settings = {
     "autoAdd": True,
     "autoJoin": False,
-    'autoCancel':{"on":True,"members":10},	
+    'autoCancel':{"on":True,"members":5},	
     "autoLeave": False,
     "autoRead": False,
     "leaveRoom": False,
@@ -113,10 +113,10 @@ settings = {
     "lang":"JP",
     "Wc": False,
     "Lv": False,
-    "KIEBOT1":"\n[ยังไม่มีข้อความเข้า]",
-    "KIEBOT2":"\n[ยังไม่มีข้อความออก]",
-    "tag1":"\n[ยังไม่มีข้อความ ตอบกลับ]",
-    "tag2":"\n[ยังไม่มีข้อความ ตอบกลับ]",
+    "KIEBOT1":"\n[เฮโหลๆๆๆ 😚มาใหม่แก้ผ้าน่ะเเจ๊ะ ไหนๆเอา หำกะหอยมาเบิ่งติ่ละ ❣ ]",
+    "KIEBOT2":"\n[เอ้า ! ไปละติ่ บักปอบ บ๊ายยยยย 🖑]",
+    "tag1":"\n[แทคทำมัย (!)นัดเยสเลยมั้ยเตง ^^ โวโวเยเย 😛]",
+    "tag2":"\n[แทคทำมัย (!)นัดเยสเลยมั้ยเตง ^^ โวโวเยเย 😛]",
     "blacklist":{},
     "winvite": False,
     "wblacklist": False,
@@ -132,7 +132,7 @@ settings = {
     "pnharfbot": {},
     "pname": {},
     "pro_name": {},
-    "message":"บัญชีนี้ได้การป้องกันโดย  🍁✟ℓຫຼี้छゆຸ۞🍁  ระบบได้ทำการบล็อคคุณอัตโนมัติ",
+    "message":"บัญชีนี้ได้การป้องกันโดย 🕸ℓຫຼี้छՃิ🕸   ระบบได้ทำการบล็อคคุณอัตโนมัติ",
     "comment":"Thanks for add me",
     "userAgent": [
         "Mozilla/5.0 (X11; U; Linux i586; de; rv:5.0) Gecko/20100101 Firefox/5.0",
@@ -221,7 +221,7 @@ backup.statusMessage = contact.statusMessage
 backup.pictureStatus = contact.pictureStatus
 
 mulai = time.time() 
-dangerMessage = ["cleanse","group cleansed.","mulai",".winebot",".kickall","mayhem","kick on","makasih :d","!kickall","nuke","บิน",".???","งงไปดิ","บินไปดิ","เซลกากจัง","@พี่อาร์ท","@ATR","ขอคลิปหน่อยครับ"]
+dangerMessage = ["cleanse","group cleansed.","mulai",".winebot",".kickall","mayhem","kick on","makasih :d","!kickall","nuke","บิน",".???","งงไปดิ","บินไปดิ","เซลกากจัง","ครับ","ค่ะ","ขอคลิปหน่อยครับ"]
 
 myProfile["displayName"] = lineProfile.displayName
 myProfile["statusMessage"] = lineProfile.statusMessage
@@ -284,7 +284,7 @@ def sendMessageWithMention(to, lineMID):
         logError(error)
  
 def myhelp():
-    myHelp = "✰「ɢʜᴏsᴛ ᴛᴇᴀᴍ」✰   " + "\n" \
+    myHelp = "✰「  🌸ℓຫຼี้छՃิ🌸  」✰   " + "\n" \
                   "❥「บัญชี」" + "\n" + \
                   "❥「textTospeech」" + "\n" + \
                   "❥「Languange」" + "\n" + \
@@ -3233,7 +3233,7 @@ def lineBot(op):
                     line.sendMessage(msg.to,"ทำการลบัญชีดำทั้งหมดเรียร้อย")
                     print ("Clear Ban")
 
-                elif text.lower() == "ทั้งหมด on":
+                elif text.lower() == "มาหอย":
                     if msg.toType == 2:
                         group = line.getGroup(to)
                         group.preventedJoinByTicket = False
@@ -3454,7 +3454,7 @@ def lineBot(op):
                                 pass
                                 print ("Remove Chat Kicker")
 
-                elif text.lower() == "ทั้งหมด bye":
+                elif text.lower() == "หนีหอย":
                     if msg._from in Family:
                         ki.leaveGroup(msg.to)
                         kk.leaveGroup(msg.to)
@@ -3977,7 +3977,7 @@ def lineBot(op):
                                 except:
                                     pass       
 #===========≠==========================================#       
-                elif text.lower() == '/ลบรัน':
+                elif text.lower() == 'ลบรัน':
                     gid = line.getGroupIdsInvited()
                     start = time.time()
                     for i in gid:
