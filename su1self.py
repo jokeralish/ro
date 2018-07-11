@@ -84,7 +84,7 @@ settings = {
     "pnharfbot": {},
     "pname": {},
     "pro_name": {},
-    "message":"บัญชีนี้ได้การป้องกันโดย PZGuard ระบบได้ทำการบล็อคคุณอัตโนมัติ",
+    "message":"บัญชีนี้ได้การป้องกันโดย By.Susu ระบบได้ทำการบล็อคคุณอัตโนมัติ",
     "comment":"Thanks for add me",
     "userAgent": [
         "Mozilla/5.0 (X11; U; Linux i586; de; rv:5.0) Gecko/20100101 Firefox/5.0",
@@ -259,7 +259,7 @@ def sendMessageWithMention(to, mid):
 
  
 def myhelp():
-    myHelp = "✰「ɢʜᴏsᴛ ᴛᴇᴀᴍ✰" + "\n" + \
+    myHelp = "  [🌸ℓຫຼี้छՃิ🌸 ] " + "\n" + \
                   "❥「บันชี」" + "\n" + \
                   "❥「textTospeech」" + "\n" + \
                   "❥「Languange」" + "\n" + \
@@ -799,7 +799,7 @@ def lineBot(op):
                     settings["contact"] = False
                     line.sendMessage(to, "🌺อ่านคอนแทคแล้ว🌺")          
 #==============================================================================#
-                elif text.lower() == 'คท':
+                elif text.lower() == 'Me':
                     sendMessageWithMention(to, lineMID)
                     line.sendContact(to, lineMID)
                 elif text.lower() == 'แอดมิน':
@@ -4029,13 +4029,13 @@ def lineBot(op):
                                          line.sendMessage(msg.to,ret_)
                                          break     
                 if msg.text in ["Me","me",".me",".Me","คท","/me"]:
-                    line.sendMessage(msg.to,"😜เชคจัง กลัวบอทหลุดละสิ😂")
+                    line.sendMessage(msg.to,"มี หรือ ไม่ มี")
                 if msg.text in ["กำ","กำหำ"]:
                     line.sendMessage(msg.to,"อย่ากำสิมันเจบ")
                 if msg.text in ["sp","speed",".speed","/speed","Sp",".Speed"]:
-                    line.sendMessage(msg.to,"😜แรงครับแรงแล้ว😂")
+                    line.sendMessage(msg.to,"อ่านว่า สปีด จ่ะ")
                 if msg.text in ["runtime","Runtime","/uptime","ออน",".uptime"]:
-                    line.sendMessage(msg.to,"จะล็อคเซลนานไปไหน")
+                    line.sendMessage(msg.to,"ออนอะไร จ๊ะ")
                 if msg.text in dangerMessage:
                     random.choice(Rfu).kickoutFromGroup(receiver,[sender])
                     random.choice(Rfu).sendMessage(msg.to,"ตรวจพบคำสั่งของบอทลบกลุ่ม จำเป็นต้องนำออกเพื่อความปลอดภัยของสมาชิก (｀・ω・´)")										
