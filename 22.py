@@ -19,27 +19,27 @@ from googletrans import Translator
 botStart = time.time()
 #==============================================================================#
 line = LINE()
-#line = LINE('EtGdOI2G1ZKviUEPKur1.qYrMQO4gXpceGGR1gbkR4q.Uf9ukDRzQjaifJeLPHu1KvOBfodM4u4aVXGEGt0rjXY=')
+#line = LINE()
 line.log("Auth Token : " + str(line.authToken))
 line.log("Timeline Token : " + str(line.tl.channelAccessToken))
 
-#ki = LINE('vosiseg@o3enzyme.com','get55160')
-ki = LINE('EtC71nL2HVhl2wlFxjV6./lM9YOrB0Gm+5FZ5CM7pvG.OqlzIJyw5b9j3VjdsTWt3YQ6nTXzRBHnu7SNj7oQ/LQ=')
+#ki = LINE()
+ki = LINE()
 ki.log("Auth Token : " + str(ki.authToken))
 ki.log("Timeline Token : " + str(ki.tl.channelAccessToken))
 
 #kk = LINE()
-kk = LINE('EtN9EGOUcnLydNIpJF10.x0+nhacvft0INQIpHi9Tua.xeBHd1WFuZ4o+gM3Y9kZFW3dKsAzCMYq7CXo+X5u0iM=')
+kk = LINE()
 kk.log("Auth Token : " + str(kk.authToken))
 kk.log("Timeline Token : " + str(kk.tl.channelAccessToken))
 
 #kc = LINE()
-kc = LINE('EtLuHXdvcFHpgVHTEIB9./9D5e+13NIfstiB20Y7u6q.x3ZTGXZqjX8qn3GugP8vMGv26MxTyvsrnf428Vw85zk=')
+kc = LINE()
 kc.log("Auth Token : " + str(kc.authToken))
 kc.log("Timeline Token : " + str(kc.tl.channelAccessToken))
 
 #ke = LINE()
-ke = LINE('EtjglMdrtsLqtlSCZyL3.QxkhYgEDbzweDhKdgKHViW.b5B7dNKI3BF2mLLNsCpUTjpfkV6Q2zx713/kR2RD0y0=')
+ke = LINE()
 ke.log("Auth Token : " + str(ke.authToken))
 ke.log("Timeline Token : " + str(ke.tl.channelAccessToken))
 
@@ -86,8 +86,8 @@ kcMID = kc.getProfile().mid
 kcMID = ke.getProfile().mid
 bot1 = line.getProfile().mid
 RfuBot=[lineMID,kiMID,kkMID,kcMID,keMID]
-Family=["u432466aa8e06c4f084820af51812abe1",lineMID,kiMID,kkMID,kcMID,keMID]
-admin=['u432466aa8e06c4f084820af51812abe1',lineMID]
+Family=["u9e89c2795376097bbe654ac7477ce1a3",lineMID,kiMID,kkMID,kcMID,keMID]
+admin=['u9e89c2795376097bbe654ac7477ce1a3',lineMID]
 RfuFamily = RfuBot + Family
 
 protectname = []
@@ -708,7 +708,7 @@ def lineBot(op):
                 elif text.lower() == 'บัญชี':
                     try:
                         arr = []
-                        owner = "u432466aa8e06c4f084820af51812abe1"
+                        owner = "u9e89c2795376097bbe654ac7477ce1a3"
                         creator = line.getContact(owner)
                         contact = line.getContact(lineMID)
                         grouplist = line.getGroupIdsJoined()
