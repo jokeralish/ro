@@ -34,12 +34,12 @@ kk.log("Auth Token : " + str(kk.authToken))
 kk.log("Timeline Token : " + str(kk.tl.channelAccessToken))
 
 #kc = LINE()
-kc = LINE()
+kc = LINE('bot2nu2018@gmail.com','nunu_kap2018')
 kc.log("Auth Token : " + str(kc.authToken))
 kc.log("Timeline Token : " + str(kc.tl.channelAccessToken))
 
 #ke = LINE()
-ke = LINE()
+ke = LINE('bot3nu2018@gmail.com','nunu_kap2018')
 ke.log("Auth Token : " + str(ke.authToken))
 ke.log("Timeline Token : " + str(ke.tl.channelAccessToken))
 
