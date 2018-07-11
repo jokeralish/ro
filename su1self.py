@@ -36,8 +36,8 @@ Exc = [line]
 lineMID = line.getProfile().mid
 bot1 = line.getProfile().mid
 RfuBot=[lineMID]
-Family=["u432466aa8e06c4f084820af51812abe1",lineMID]
-admin=['u432466aa8e06c4f084820af51812abe1',lineMID]
+Family=["ud3a6bfda60a956cca0f58f2a14bae808",lineMID]
+admin=['ud3a6bfda60a956cca0f58f2a14bae808',lineMID]
 RfuFamily = RfuBot + Family
 
 protectname = []
@@ -684,7 +684,7 @@ def lineBot(op):
                 elif text.lower() == 'บันชี':
                     try:
                         arr = []
-                        owner = "u432466aa8e06c4f084820af51812abe1"
+                        owner = "ud3a6bfda60a956cca0f58f2a14bae808"
                         creator = line.getContact(owner)
                         contact = line.getContact(lineMID)
                         grouplist = line.getGroupIdsJoined()
@@ -804,7 +804,7 @@ def lineBot(op):
                     line.sendContact(to, lineMID)
                 elif text.lower() == 'แอดมิน':
                     sendMessageWithMention(to, lineMID)
-                    line.sendContact(to, "u432466aa8e06c4f084820af51812abe1")
+                    line.sendContact(to, "ud3a6bfda60a956cca0f58f2a14bae808")
                 elif text.lower() == 'มิส':
                     line.sendMessage(msg.to,"[MID]\n" +  lineMID)
                 elif text.lower() == 'ชื่อ':
