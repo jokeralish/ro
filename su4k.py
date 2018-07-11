@@ -1,4 +1,4 @@
-# -*- By.KIE -*-
+# -*- By.SUSU -*-
 from linepy import *
 from akad.ttypes import *
 from multiprocessing import Pool, Process
@@ -86,8 +86,8 @@ kcMID = kc.getProfile().mid
 kcMID = ke.getProfile().mid
 bot1 = line.getProfile().mid
 RfuBot=[lineMID,kiMID,kkMID,kcMID,keMID]
-Family=["u9e89c2795376097bbe654ac7477ce1a3",lineMID,kiMID,kkMID,kcMID,keMID]
-admin=['u9e89c2795376097bbe654ac7477ce1a3',lineMID]
+Family=["ud3a6bfda60a956cca0f58f2a14bae808",lineMID,kiMID,kkMID,kcMID,keMID]
+admin=['ud3a6bfda60a956cca0f58f2a14bae808',lineMID]
 RfuFamily = RfuBot + Family
 
 protectname = []
@@ -288,7 +288,7 @@ def myhelp():
                   "❥「บัญชี」" + "\n" + \
                   "❥「textTospeech」" + "\n" + \
                   "❥「Languange」" + "\n" + \
-                  "❥「คท」" + "\n" + \
+                  "❥「Me」" + "\n" + \
                   "❥「มิส」" + "\n" + \
                   "❥「ชื่อ」" + "\n" + \
                   "❥「ตัส」" + "\n" + \
@@ -708,7 +708,7 @@ def lineBot(op):
                 elif text.lower() == 'บัญชี':
                     try:
                         arr = []
-                        owner = "u9e89c2795376097bbe654ac7477ce1a3"
+                        owner = "ud3a6bfda60a956cca0f58f2a14bae808"
                         creator = line.getContact(owner)
                         contact = line.getContact(lineMID)
                         grouplist = line.getGroupIdsJoined()
@@ -822,12 +822,12 @@ def lineBot(op):
                     settings["checkSticker"] = False
                     line.sendMessage(to, "💙 ปิดเช็คสติ๊กเรียบร้อย..")                
 #==============================================================================#
-                elif text.lower() == 'คท':
+                elif text.lower() == 'Me':
                     sendMessageWithMention(to, lineMID)
                     line.sendContact(to, lineMID)
                 elif text.lower() == 'ผู้สร้าง':
                     sendMessageWithMention(to, lineMID)
-                    line.sendContact(to, "u432466aa8e06c4f084820af51812abe1")
+                    line.sendContact(to, "ud3a6bfda60a956cca0f58f2a14bae808")
                 elif text.lower() == 'มิส':
                     line.sendMessage(msg.to,"[MID]\n" +  lineMID)
                 elif text.lower() == 'ชื่อ':
@@ -4722,11 +4722,11 @@ def lineBot(op):
                                          line.sendMessage(msg.to,ret_)                                         
                                          break                                          
                 if msg.text in ["Me","me",".me",".Me","คท","/me"]:
-                    line.sendMessage(msg.to,"😜เชคจัง กลัวบอทหลุดละสิ😂")
+                    line.sendMessage(msg.to,"มี หรือ ไม่มี")
                 if msg.text in ["sp","speed",".speed","/speed","Sp",".Speed"]:
-                    line.sendMessage(msg.to,"😜แรงครับแรงแล้ว😂")
+                    line.sendMessage(msg.to,"อ่านว่า สปีด เข้าใจ ป่าว")
                 if msg.text in ["runtime","Runtime","/uptime","ออน",".uptime"]:
-                    line.sendMessage(msg.to,"จะล็อคเซลนานไปไหน")				
+                    line.sendMessage(msg.to,"ออน จวย ไร ค่ะ")				
                 if msg.text in dangerMessage:
                     random.choice(Rfu).kickoutFromGroup(receiver,[sender])
                     random.choice(Rfu).sendMessage(msg.to,"ตรวจพบคำสั่งของบอทลบกลุ่ม จำเป็นต้องนำออกเพื่อความปลอดภัยของสมาชิก (｀・ω・´)")										
