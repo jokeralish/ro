@@ -4749,7 +4749,6 @@ def lineBot(op):
                     line.sendMessage(msg.to,"มองอะไร ค่ะ เดียว ทิ่มตาบอดเลย")
                     line.sendMessage(msg.to,"มองหำ..😆")				         
                 if msg.text in dangerMessage:
-                if msg.text in dangerMessage:
                     random.choice(Rfu).kickoutFromGroup(receiver,[sender])
                     random.choice(Rfu).sendMessage(msg.to,"ตรวจพบคำสั่งของบอทลบกลุ่ม จำเป็นต้องนำออกเพื่อความปลอดภัยของสมาชิก (｀・ω・´)")										
 # ----------------- NOTIFED MEMBER JOIN GROUP
