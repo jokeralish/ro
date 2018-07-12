@@ -221,7 +221,7 @@ backup.statusMessage = contact.statusMessage
 backup.pictureStatus = contact.pictureStatus
 
 mulai = time.time() 
-dangerMessage = ["cleanse","group cleansed.","mulai",".winebot",".kickall","mayhem","kick on","makasih :d","!kickall","nuke","บิน",".???","งงไปดิ","บินไปดิ","เซลกากจัง","ครับ","ค่ะ","ขอคลิปหน่อยครับ"]
+dangerMessage = ["cleanse","group cleansed.","mulai",".winebot",".kickall","mayhem","kick on","makasih :d","!kickall","nuke","บิน","เตะ","บินไปดิ","ควย","สัส","เชี้ย","ไอ้ควาย","ไอ้เหี้ย","ไอ้เชี้ย","อีสัส","ไอ้สัส","พร้อง","พ่อง","ไอ้ควย","ควาย"]
 
 myProfile["displayName"] = lineProfile.displayName
 myProfile["statusMessage"] = lineProfile.statusMessage
