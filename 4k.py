@@ -1029,41 +1029,41 @@ def lineBot(op):
                     group = line.getGroup(to)
                     GS = group.creator.mid
                     line.sendContact(to, GS)
-                    line.sendMessage(to, "Itu Pembuat Groupnya")
+                    ki.sendMessage(to, "Itu Pembuat Groupnya")
                 elif text.lower() == 'ไอดีกลุ่ม':
                     gid = line.getGroup(to)
-                    line.sendMessage(to, "ID GROUP \n" + gid.id)
+                    ki.sendMessage(to, "ID GROUP \n" + gid.id)
                 elif text.lower() == 'รูปกลุ่ม':
                     group = line.getGroup(to)
                     path = "http://dl.profile.line-cdn.net/" + group.pictureStatus
-                    line.sendImageWithURL(to, path)
+                    ki.sendImageWithURL(to, path)
                 elif text.lower() == 'ชื่อกลุ่ม':
                     gid = line.getGroup(to)
-                    line.sendMessage(to, "Name Group -> \n" + gid.name)
-                elif text.lower() == 'url':
+                    kk.sendMessage(to, "Name Group -> \n" + gid.name)
+                elif text.lower() == 'ulr':
                     if msg.toType == 2:
-                        group = line.getGroup(to)
+                        group = ki.getGroup(to)
                         if group.preventedJoinByTicket == False:
-                            ticket = line.reissueGroupTicket(to)
-                            line.sendMessage(to, "Link Qr Group\nhttps://line.me/R/ti/g/{}".format(str(ticket)))
+                            ticket = ki.reissueGroupTicket(to)
+                            ki.sendMessage(to, "Link Qr Group\nhttps://line.me/R/ti/g/{}".format(str(ticket)))
                 elif text.lower() == 'link on':
                     if msg.toType == 2:
-                        group = line.getGroup(to)
+                        group = ki.getGroup(to)
                         if group.preventedJoinByTicket == False:
-                            line.sendMessage(to, "Link Qr to open")
+                            ki.sendMessage(to, "Link Qr to open")
                         else:
                             group.preventedJoinByTicket = False
-                            line.updateGroup(group)
-                            line.sendMessage(to, "Link Qr to open")
+                            ki.updateGroup(group)
+                            ki.sendMessage(to, "Link Qr to open")
                 elif text.lower() == 'link off':
                     if msg.toType == 2:
-                        group = line.getGroup(to)
+                        group = ki.getGroup(to)
                         if group.preventedJoinByTicket == True:
-                            line.sendMessage(to, "Link Qr to closed.")
+                            ki.sendMessage(to, "Link Qr to closed.")
                         else:
                             group.preventedJoinByTicket = True
-                            line.updateGroup(group)
-                            line.sendMessage(to, "Link Qr to closed.")
+                            ki.updateGroup(group)
+                            ki.sendMessage(to, "Link Qr to closed.")
                 elif text.lower() == 'ข้อมูลกลุ่ม':
                     group = line.getGroup(to)
                     try:
@@ -1524,22 +1524,22 @@ def lineBot(op):
                     msg.text = None
                     line.sendMessage(msg)						
 #==============================================================================#
-                elif text.lower() == 'แทค':
-                    group = line.getGroup(msg.to)
-                    nama = [contact.mid for contact in group.members]
-                    k = len(nama)//100
-                    for a in range(k+1):
-                        txt = ''
-                        s=0
-                        b=[]
-                        for i in group.members[a*100 : (a+1)*100]:
-                            b.append({"S":str(s), "E" :str(s+6), "M":i.mid})
-                            s += 7
-                            txt += '@Alin \n'
-                        line.sendMessage(to, text=txt, contentMetadata={'MENTION': json.dumps({'MENTIONEES':b})}, contentType=0)
-                        line.sendMessage(to, "ทั้งหมด {} คน".format(str(len(nama))))
+#                elif text.lower() == 'แทค':
+#                    group = line.getGroup(msg.to)
+#                    nama = [contact.mid for contact in group.members]
+#                    k = len(nama)//100
+#                    for a in range(k+1):
+#                        txt = ''
+#                        s=0
+#                        b=[]
+#                        for i in group.members[a*100 : (a+1)*100]:
+#                            b.append({"S":str(s), "E" :str(s+6), "M":i.mid})
+#                            s += 7
+#                            txt += '@Alin \n'
+#                        line.sendMessage(to, text=txt, contentMetadata={'MENTION': json.dumps({'MENTIONEES':b})}, contentType=0)
+#                        line.sendMessage(to, "ทั้งหมด {} คน".format(str(len(nama))))
 
-                elif text.lower() == 'k1 tag':
+                elif text.lower() == 'แทค':
                     group = line.getGroup(msg.to)
                     nama = [contact.mid for contact in group.members if contact.mid != lineMID]
                     k = len(nama)//500
