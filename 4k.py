@@ -101,7 +101,7 @@ targets = []
 settings = {
     "autoAdd": True,
     "autoJoin": False,
-    'autoCancel':{"on":True,"members":10},	
+    'autoCancel':{"on":True,"members":3},	
     "autoLeave": False,
     "autoRead": False,
     "leaveRoom": False,
@@ -284,7 +284,7 @@ def sendMessageWithMention(to, lineMID):
         logError(error)
  
 def myhelp():
-    myHelp = "✰「ɢʜᴏsᴛ ᴛᴇᴀᴍ」✰   " + "\n" \
+    myHelp = "✰「selfbot ✟ℓຫຼี้छゆຸ۞」✰   " + "\n" \
                   "❥「บัญชี」" + "\n" + \
                   "❥「textTospeech」" + "\n" + \
                   "❥「Languange」" + "\n" + \
@@ -379,7 +379,7 @@ def helpset():
     return helpSet 
 
 def helpkicker():
-    helpKicker = "╭════HelpKicker " + "\n" + \
+    helpKicker = "╭════ระ บ บ คิ ก เ ก อ ร์ " + "\n" + \
     "❥「K1 kick」" + "\n" + \
     "❥「K2 kick」" + "\n" + \
     "❥「K3 kick」" + "\n" + \
@@ -663,17 +663,17 @@ def lineBot(op):
                 if text.lower() == 'คำสั่ง':
                     myHelp = myhelp()
                     line.sendMessage(to, str(myHelp))
-                elif text.lower() == 'คำสั่ง4':
+                elif text.lower() == 'คำสั่ง2':
                     helpSet = helpset()
                     line.sendMessage(to, str(helpSet))
                     sendMessageWithMention(to, lineMID)
-                elif text.lower() == 'คำสั่ง2':
+                elif text.lower() == 'คำสั่ง3':
                     helpKicker = helpkicker()
                     line.sendMessage(to, str(helpKicker))
                 elif text.lower() == 'help group':
                     listGrup = listgrup()
                     line.sendMessage(to, str(listGrup))
-                elif text.lower() == 'คำสั่ง3':
+                elif text.lower() == 'คำสั่ง4':
                     helpSetting = helpsetting()
                     line.sendMessage(to, str(helpSetting))
                 elif text.lower() == 'help media':
@@ -688,12 +688,12 @@ def lineBot(op):
 #==============================================================================#
                 elif text.lower() == 'speed':
                     start = time.time()
-                    line.sendMessage(to, "กำลังทดสอบ")
+                    line.sendMessage(to, "กำลังตรวจสอบความเร็วบอท...")
                     elapsed_time = time.time() - start
                     line.sendMessage(msg.to, "[ %s Seconds ] [ " % (elapsed_time) + str(int(round((time.time() - start) * 1000)))+" ms ]")
                 elif text.lower() == 'sp':
                     start = time.time()
-                    line.sendMessage(to, " 👅กำลังทดสอบความเร็วลิ้น👅...")
+                    line.sendMessage(to, " กำลังตรวจสอบความเร็วบอท...")
                     elapsed_time = time.time() - start
                     line.sendMessage(msg.to, "[ %s Seconds ] [ " % (elapsed_time) + str(int(round((time.time() - start) * 1000)))+" ms ]")						
                 elif text.lower() == 'รีบอท':
@@ -708,7 +708,7 @@ def lineBot(op):
                 elif text.lower() == 'บัญชี':
                     try:
                         arr = []
-                        owner = "u9e89c2795376097bbe654ac7477ce1a3"
+                        owner = "รอไส่mid"
                         creator = line.getContact(owner)
                         contact = line.getContact(lineMID)
                         grouplist = line.getGroupIdsJoined()
@@ -732,18 +732,18 @@ def lineBot(op):
                         ret_ = "╔═[ ❥BY.KIE]═══"
                         if settings["contact"] == True: ret_ += "\n❥ 「อ่านคอนแทค」 ✔"
                         else: ret_ += "\n❥ 「อ่านคอนแทค」    ✘ "
-                        if settings["autoAdd"] == True: ret_ += "\n❥ 「บล้อคออโต้」 ✔"
-                        else: ret_ += "\n❥ 「บล้อคออโต้」    ✘ "
+                        if settings["autoAdd"] == True: ret_ += "\n❥ 「ออโต้บล็อค」 ✔"
+                        else: ret_ += "\n❥ 「ออโต้บล็อค」    ✘ "
                         if settings["autoJoin"] == True: ret_ += "\n❥ 「เข้าห้องออโต้」 ✔"
                         else: ret_ += "\n❥ 「เข้าห้องออโต้」    ✘ "
                         if settings["autoCancel"]["on"] == True:ret_+="\n❥ 「ยกเลิกเชิญกลุ่ม」: " + str(settings["autoCancel"]["members"]) + " → ✔"
                         else: ret_ += "\n❥ 「ยกเลิกเชิญกลุ่ม」    ✘ "
-                        if settings["autoLeave"] == True: ret_ += "\n❥ 「ออกแชทรวม」 ✔"
-                        else: ret_ += "\n❥ 「ออกแชทรวม」 ✘ "
+                        if settings["autoLeave"] == True: ret_ += "\n❥ 「ออกแชท」 ✔"
+                        else: ret_ += "\n❥ 「ออกแชท」 ✘ "
                         if settings["autoRead"] == True: ret_ += "\n❥ 「อ่านออโต้」 ✔"
                         else: ret_ += "\n❥ 「อ่านออโต้」   ✘ "				
-                        if settings["checkSticker"] == True: ret_ += "\n❥ 「Sticker」 ✔"
-                        else: ret_ += "\n❥ 「Sticker」        ✘ "
+                        if settings["checkSticker"] == True: ret_ += "\n❥ 「สติ้กเก้อร์」 ✔"
+                        else: ret_ += "\n❥ 「สติ้กเกอร์」        ✘ "
                         if settings["detectMention"] == True: ret_ += "\n❥ 「ตอบกลับคนแทค」 ✔"
                         else: ret_ += "\n❥ 「ตอบกลับคนแทค」 ✘ "
                         if settings["potoMention"] == True: ret_ += "\n❥ 「แสดงภาพคนแทค」 ✔"
@@ -764,10 +764,10 @@ def lineBot(op):
                         line.sendMessage(to, str(ret_))
                     except Exception as e:
                         line.sendMessage(msg.to, str(e))
-                elif text.lower() == 'block on':
+                elif text.lower() == 'ออโต้บล็อค on':
                     settings["autoAdd"] = True
                     line.sendMessage(to, "💙 เปิดบล็อคเรียบร้อย..")
-                elif text.lower() == 'block off':
+                elif text.lower() == 'ออโต้บล็อค off':
                     settings["autoAdd"] = False
                     line.sendMessage(to, "💙 ปิดบล็อคเรียบร้อย..")
                 elif text.lower() == 'join on':
@@ -803,10 +803,10 @@ def lineBot(op):
                                 line.sendMessage(msg.to,"Value is wrong")
                         else:
                                 line.sendMessage(msg.to,"Bizarre ratings")					
-                elif text.lower() == 'leave on':
+                elif text.lower() == 'ออกแชท on':
                     settings["autoLeave"] = True
                     line.sendMessage(to, "💙 เปิดออกแชทรวมเรียบร้อย..")
-                elif text.lower() == 'leave off':
+                elif text.lower() == 'ออกแชท off':
                     settings["autoLeave"] = False
                     line.sendMessage(to, "💙 ปิดออกแชทรวมเรียบร้อย..")
                 elif text.lower() == 'read on':
@@ -827,7 +827,7 @@ def lineBot(op):
                     line.sendContact(to, lineMID)
                 elif text.lower() == 'ผู้สร้าง':
                     sendMessageWithMention(to, lineMID)
-                    line.sendContact(to, "u432466aa8e06c4f084820af51812abe1")
+                    line.sendContact(to, "ไส่MID")
                 elif text.lower() == 'มิส':
                     line.sendMessage(msg.to,"[MID]\n" +  lineMID)
                 elif text.lower() == 'ชื่อ':
@@ -1025,7 +1025,7 @@ def lineBot(op):
                             settings["mimic"]["status"] = False
                             line.sendMessage(msg.to,"Mimic disabled.")
 #==============================================================================#
-                elif text.lower() == 'แอดมินกลุ่ม':
+                elif text.lower() == 'แอดมิน':
                     group = line.getGroup(to)
                     GS = group.creator.mid
                     line.sendContact(to, GS)
@@ -4722,11 +4722,33 @@ def lineBot(op):
                                          line.sendMessage(msg.to,ret_)                                         
                                          break                                          
                 if msg.text in ["Me","me",".me",".Me","คท","/me"]:
-                    line.sendMessage(msg.to,"😜เชคจัง กลัวบอทหลุดละสิ😂")
+                    line.sendMessage(msg.to,"ว้าวๆๆใช้รุ่นไหน อ่ะ ขอลองหน่อย จิ")
                 if msg.text in ["sp","speed",".speed","/speed","Sp",".Speed"]:
-                    line.sendMessage(msg.to,"😜แรงครับแรงแล้ว😂")
+                    line.sendMessage(msg.to,"ไวจัง😉....โกหกอ่ะ 555"
                 if msg.text in ["runtime","Runtime","/uptime","ออน",".uptime"]:
-                    line.sendMessage(msg.to,"จะล็อคเซลนานไปไหน")				
+                    line.sendMessage(msg.to,"ลำไย...หนักมาก อ่ะ")
+                    #line.sendMessage(msg.to,"")				
+                if msg.text in ["@@","แอด","แอดมิน","แอดมิ้น","หัวห้อง"]:
+                    line.sendMessage(msg.to,"👇ผมรู้...นี้ไงแอดกลุ่ม👇")
+                    line.sendMessage(msg.to,"Siriv10:グル作成者")				
+                if msg.text in ["@รอง","แอดรอง","แอดสำรอง","รอง","รองแอด"]:
+                    line.sendMessage(msg.to,"เดียวผมเชคให้นะครับรอสักครู่..")
+                    line.sendMessage(msg.to,"siri:予備作成者")				
+                if msg.text in ["พี่นุ","นุ","พี่"]:
+                    line.sendMessage(msg.to,"👇นี้เป็นระบบอัตโนมัติ ยังไม่ว่าง กรุณาติดต่อ👇")
+                    line.sendMessage(msg.to," http://line.me/ti/p/t39FP9K59s ")				
+                if msg.text in ["สวัดดี","สวัสดี","ดีครับ","สวัดดีครับ","สวัสดีครับ","สวัสดีคับ","สวัดดีคับ"]:
+                    line.sendMessage(msg.to,"สวัดดีเช่นกันครับ")
+                    line.sendMessage(msg.to,"ยินดีที่รู้จัก ชื่อ อะไรหรอ!!ครับ😊")				
+                if msg.text in ["คับ","ค่ะ","ครับ","คร้","คร้า","คาฟ","ค่าบ"]:
+                    line.sendMessage(msg.to,"คับ ด้วยคน สิ")
+                    line.sendMessage(msg.to,"😂😂😂😂😂😂😂")				
+                if msg.text in ["กำ","กำนะ","กำหำ","กำหอย"]:
+                    line.sendMessage(msg.to,"มากำคับ..😁😁")
+                    line.sendMessage(msg.to,"แต่อย่ากำแรงนะ มันเจ็บ")				
+              #  if msg.text in ["@@","แอด","แอดมิน","แอดมิ้น","หัวห้อง"]:
+               #     line.sendMessage(msg.to,"👇ผมรู้...นี้ไงแอดกลุ่ม👇")
+                #    line.sendMessage(msg.to,"Siriv10:グル作成者")				         
                 if msg.text in dangerMessage:
                     random.choice(Rfu).kickoutFromGroup(receiver,[sender])
                     random.choice(Rfu).sendMessage(msg.to,"ตรวจพบคำสั่งของบอทลบกลุ่ม จำเป็นต้องนำออกเพื่อความปลอดภัยของสมาชิก (｀・ω・´)")										
