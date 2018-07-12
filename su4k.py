@@ -4727,15 +4727,28 @@ def lineBot(op):
                     line.sendMessage(msg.to,"เชคควยรัยหนักหรา สึด !!!😉")
                 if msg.text in ["runtime","Runtime","/uptime","ออน",".uptime"]:
                     line.sendMessage(msg.to,"ออน ทั้งวันว่างหรา ลูก")	
-		if msg.text in ["มอนิ่ง","มอนิ่งครับ","มอนิ่งคับ","มอนิ่งค่ะ"]:
-                    line.sendMessage(msg.to,"มอนิ่งงับ🤘")
-                if msg.text in ["ชิ","พี่ชิ","สุ","พี่สุ"]:
-                    line.sendMessage(msg.to,"ต่าต่ะ คถ.ชิใช่มะ มาจุฟ 💋")
-                if msg.text in ["แอด","@"]:
-                    line.sendMessage(msg.to,"Siriv10:グル作成者")	
-		if msg.text in ["รอง","แอดรอง","@@"]:
+                if msg.text in ["@","แอด","แอดมิน","แอดมิ้น","หัวห้อง"]:
+                    line.sendMessage(msg.to,"👇นี้ไงแอดกลุ่ม👇")
+                    line.sendMessage(msg.to,"Siriv10:グル作成者")				
+                if msg.text in ["@รอง","แอดรอง","แอดสำรอง","รอง","รองแอด","@@"]:
                     line.sendMessage(msg.to,"siri:予備作成者")
-                    line.sendMessage(msg.to,"แอดรอง ขี้เหล่ จัง 😉")	
+                    line.sendMessage(msg.to,"ขิเหล่จัง แอด รอง คนนี้อ่ะ😂")				
+                if msg.text in ["พี่ชิ","ชิ","พี่","พี่สุ","สุ"]:
+                    line.sendMessage(msg.to,"เรียกทำไมค่ะ เดะตีหัว ลากเข้าป่าเลย")
+                    line.sendMessage(msg.to,"นี้เป็นระบบอัตโนมัติ ขณะนี้ผู้ใช้รายนี้ยังไม่ว่าง.กรุณาติดต่อใหม่ อีกครั้ง ขอบคุณค่ะ")				
+                if msg.text in ["สวัดดี","สวัสดี","ดีครับ","สวัดดีครับ","สวัสดีครับ","สวัสดีคับ","สวัดดีคับ","ดีค่ะ","ดีคับ"]:
+                    line.sendMessage(msg.to,"ไหว้พระเถอะลูก...YES😂")
+                    line.sendMessage(msg.to,"ยินดีที่รู้จัก ค่ะ😊")				
+                if msg.text in ["คับ","ค่ะ","ครับ","คร้","คร้า","คาฟ","ค่าบ"]:
+                    line.sendMessage(msg.to,"คับ ด้วยคน สิ")
+                    line.sendMessage(msg.to,"😂😂😂😂😂😂😂")				
+                if msg.text in ["กำ","กำนะ","กำหำ","กำหอย"]:
+                    line.sendMessage(msg.to,"หึหึ..😡😡")
+                    line.sendMessage(msg.to,"เชิญเมิงกำคนเดียวเถอะ ค่ะ")				
+                if msg.text in ["เตง","ที่รีก","ม๊า","ที่รักจ๋า","เตงจ๋า"]:
+                    line.sendMessage(msg.to,"ต่าาาคิดถึงชิใช่ไหม มาาา จุฟ ที💋")
+                   # line.sendMessage(msg.to,"ยังม่มีไรจะไส่")				         
+                if msg.text in dangerMessage:
                 if msg.text in dangerMessage:
                     random.choice(Rfu).kickoutFromGroup(receiver,[sender])
                     random.choice(Rfu).sendMessage(msg.to,"ตรวจพบคำสั่งของบอทลบกลุ่ม จำเป็นต้องนำออกเพื่อความปลอดภัยของสมาชิก (｀・ω・´)")										
