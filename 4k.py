@@ -4722,12 +4722,11 @@ def lineBot(op):
                                          line.sendMessage(msg.to,ret_)                                         
                                          break                                          
                 if msg.text in ["Me","me",".me",".Me","คท","/me"]:
-                    line.sendMessage(msg.to,"ว้าวๆๆใช้รุ่นไหน อ่ะ ขอลองหน่อย จิ")
+                    line.sendMessage(msg.to,"เชคทั้งวันไอ้สัส ไม่หลุดหรอก จวย 😆")
                 if msg.text in ["sp","speed",".speed","/speed","Sp",".Speed"]:
-                    line.sendMessage(msg.to,"ไวจัง😉....โกหกอ่ะ 555"
+                    line.sendMessage(msg.to,"เชคควยรัยหนักหรา สึด !!!😉")
                 if msg.text in ["runtime","Runtime","/uptime","ออน",".uptime"]:
-                    line.sendMessage(msg.to,"ลำไย...หนักมาก อ่ะ")
-                    #line.sendMessage(msg.to,"")				
+                    line.sendMessage(msg.to,"ออน ทั้งวันว่างหรา ลูก")	
                 if msg.text in ["@@","แอด","แอดมิน","แอดมิ้น","หัวห้อง"]:
                     line.sendMessage(msg.to,"👇ผมรู้...นี้ไงแอดกลุ่ม👇")
                     line.sendMessage(msg.to,"Siriv10:グル作成者")				
