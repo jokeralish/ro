@@ -28,7 +28,7 @@ import requests,urllib,json
 #dna1 = LINE()
 #dna1.log("Auth Token : " + str(dna1.authToken))
 #dna1.log("Timeline Token : " + str(dna1.tl.channelAccessToken))
-ririn = LINE("sunu0734@gmail.com","sunu2018)
+ririn = LINE("sunu0734@gmail.com","sunu2018")
 dna1 = LINE("nunu4844@gmail.com","sunu2018")
 dna2 = LINE("su6nu2018@gmail.com","sunu2018")
 dna3 = LINE("su2nu2018@gmail.com","sunu2018")
