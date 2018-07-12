@@ -18,28 +18,28 @@ from googletrans import Translator
 #==============================================================================#
 botStart = time.time()
 #==============================================================================#
-line = LINE('sunu0734@gmail.com','sunu2018')
-#line = LINE()
+#line = LINE('sunu0734@gmail.com','sunu2018')
+line = LINE()
 #line.log("Auth Token : " + str(line.authToken))
 #line.log("Timeline Token : " + str(line.tl.channelAccessToken))
 
-#ki = LINE()
-ki = LINE('nunu4844@gmail.com','sunu2018')
+ki = LINE()
+#ki = LINE('nunu4844@gmail.com','sunu2018')
 #ki.log("Auth Token : " + str(ki.authToken))
 #ki.log("Timeline Token : " + str(ki.tl.channelAccessToken))
 
-#kk = LINE()
-kk = LINE('su6nu2018@gmail.com','sunu2018')
+kk = LINE()
+#kk = LINE('su6nu2018@gmail.com','sunu2018')
 #kk.log("Auth Token : " + str(kk.authToken))
 #kk.log("Timeline Token : " + str(kk.tl.channelAccessToken))
 
-#kc = LINE()
-kc = LINE('su2nu2018@gmail.com','sunu2018')
+kc = LINE()
+#kc = LINE('su2nu2018@gmail.com','sunu2018')
 #kc.log("Auth Token : " + str(kc.authToken))
 #kc.log("Timeline Token : " + str(kc.tl.channelAccessToken))
 
-#ke = LINE(su2nu2018@gmail.com)
-ke = LINE('su3nu2018@gmail.com','sunu2018')
+ke = LINE()
+#ke = LINE('su3nu2018@gmail.com','sunu2018')
 #ke.log("Auth Token : " + str(ke.authToken))
 #ke.log("Timeline Token : " + str(ke.tl.channelAccessToken))
 
