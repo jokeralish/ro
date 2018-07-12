@@ -662,29 +662,29 @@ def lineBot(op):
               
                 if text.lower() == 'คำสั่ง':
                     myHelp = myhelp()
-                    line.sendMessage(to, str(myHelp))
+                    ki.sendMessage(to, str(myHelp))
                 elif text.lower() == 'คำสั่ง2':
                     helpSet = helpset()
-                    line.sendMessage(to, str(helpSet))
+                    kk.sendMessage(to, str(helpSet))
                     sendMessageWithMention(to, lineMID)
                 elif text.lower() == 'คำสั่ง3':
                     helpKicker = helpkicker()
-                    line.sendMessage(to, str(helpKicker))
-                elif text.lower() == 'help group':
+                    kc.sendMessage(to, str(helpKicker))
+                elif text.lower() == 'คำสั่ง5':
                     listGrup = listgrup()
-                    line.sendMessage(to, str(listGrup))
+                    ke.sendMessage(to, str(listGrup))
                 elif text.lower() == 'คำสั่ง4':
                     helpSetting = helpsetting()
-                    line.sendMessage(to, str(helpSetting))
+                    ki.sendMessage(to, str(helpSetting))
                 elif text.lower() == 'help media':
                     socMedia = socmedia()
-                    line.sendMessage(to, str(socMedia))
+                    kk.sendMessage(to, str(socMedia))
                 elif text.lower() == 'texttospeech':
                     helpTextToSpeech = helptexttospeech()
-                    line.sendMessage(to, str(helpTextToSpeech))
+                    kc.sendMessage(to, str(helpTextToSpeech))
                 elif text.lower() == 'languange':
                     helpLanguange = helplanguange()
-                    line.sendMessage(to, str(helpLanguange))
+                    ke.sendMessage(to, str(helpLanguange))
 #==============================================================================#
                 elif text.lower() == 'speed':
                     start = time.time()
@@ -697,14 +697,14 @@ def lineBot(op):
                     elapsed_time = time.time() - start
                     line.sendMessage(msg.to, "[ %s Seconds ] [ " % (elapsed_time) + str(int(round((time.time() - start) * 1000)))+" ms ]")						
                 elif text.lower() == 'รีบอท':
-                    line.sendMessage(to, "💙 โปรดรอสักครู่..เจ้านาย 💙")
-                    line.sendMessage(to, "💙 รีสตารท..เสร็จสิ้น 💙")
+                    ki.sendMessage(to, "💙 โปรดรอสักครู่..เจ้านาย 💙")
+                    kc.sendMessage(to, "💙 รีสตารท..เสร็จสิ้น 💙")
                     restartBot()
                 elif text.lower() == 'ออน':
                     timeNow = time.time()
                     runtime = timeNow - botStart
                     runtime = format_timespan(runtime)
-                    line.sendMessage(to, "💜ชีวิตที่เหลืออยู่...💜\n {}".format(str(runtime)))
+                    ki.sendMessage(to, "💜ชีวิตที่เหลืออยู่...💜\n {}".format(str(runtime)))
                 elif text.lower() == 'บัญชี':
                     try:
                         arr = []
@@ -761,27 +761,27 @@ def lineBot(op):
                         if RfuProtect["Protectjoin"] == True: ret_ += "\n❥ 「ป้องกันเข้ากลุ่ม」 ✔"
                         else: ret_ += "\n❥ 「ป้องกันเข้ากลุ่ม」 ✘ "						
                         ret_ += "\n╚════[ Status ]═════┛"
-                        line.sendMessage(to, str(ret_))
+                        ki.sendMessage(to, str(ret_))
                     except Exception as e:
-                        line.sendMessage(msg.to, str(e))
+                        ki.sendMessage(msg.to, str(e))
                 elif text.lower() == 'ออโต้บล็อค on':
                     settings["autoAdd"] = True
-                    line.sendMessage(to, "💙 เปิดบล็อคเรียบร้อย..")
+                    ki.sendMessage(to, "💙 เปิดบล็อคเรียบร้อย..")
                 elif text.lower() == 'ออโต้บล็อค off':
                     settings["autoAdd"] = False
-                    line.sendMessage(to, "💙 ปิดบล็อคเรียบร้อย..")
+                    ki.sendMessage(to, "💙 ปิดบล็อคเรียบร้อย..")
                 elif text.lower() == 'join on':
                     settings["autoJoin"] = True
-                    line.sendMessage(to, "💙 เปิดเข้ากลุ่มเรียบร้อย..")
+                    kk.sendMessage(to, "💙 เปิดเข้ากลุ่มเรียบร้อย..")
                 elif text.lower() == 'join off':
                     settings["autoJoin"] = False
-                    line.sendMessage(to, "💙 ปิดเข้ากลุ่มเรียบร้อย..ชล")
+                    kk.sendMessage(to, "💙 ปิดเข้ากลุ่มเรียบร้อย..ชล")
                 elif text.lower() == 'contact on':
                     settings["contact"] = True
-                    line.sendMessage(to, "เปิดอ่านคอนแทค")
+                    kc.sendMessage(to, "เปิดอ่านคอนแทค")
                 elif text.lower() == 'contact off':
                     settings["contact"] = False
-                    line.sendMessage(to, "ปิดอ่านคอนแทค")
+                    kc.sendMessage(to, "ปิดอ่านคอนแทค")
                 elif "Gcancel:" in msg.text:
                     try:
                         strnum = msg.text.replace("Gcancel:","")
@@ -805,47 +805,47 @@ def lineBot(op):
                                 line.sendMessage(msg.to,"Bizarre ratings")					
                 elif text.lower() == 'ออกแชท on':
                     settings["autoLeave"] = True
-                    line.sendMessage(to, "💙 เปิดออกแชทรวมเรียบร้อย..")
+                    ke.sendMessage(to, "💙 เปิดออกแชทรวมเรียบร้อย..")
                 elif text.lower() == 'ออกแชท off':
                     settings["autoLeave"] = False
-                    line.sendMessage(to, "💙 ปิดออกแชทรวมเรียบร้อย..")
+                    ke.sendMessage(to, "💙 ปิดออกแชทรวมเรียบร้อย..")
                 elif text.lower() == 'read on':
                     settings["autoRead"] = True
-                    line.sendMessage(to, "💙 เปิดอ่านออโต้เรียบร้อย..")
+                    ki.sendMessage(to, "💙 เปิดอ่านออโต้เรียบร้อย..")
                 elif text.lower() == 'read off':
                     settings["autoRead"] = False
-                    line.sendMessage(to, "💙 ปิดอ่านออโต้เรียบร้อย..")
+                    ki.sendMessage(to, "💙 ปิดอ่านออโต้เรียบร้อย..")
                 elif text.lower() == 'เปิดติ้ก':
                     settings["checkSticker"] = True
-                    line.sendMessage(to, "💙 เปิดเช็คสติ๊กเรียบร้อย..")
+                    kk.sendMessage(to, "💙 เปิดเช็คสติ๊กเรียบร้อย..")
                 elif text.lower() == 'ปิดติ้ก':
                     settings["checkSticker"] = False
-                    line.sendMessage(to, "💙 ปิดเช็คสติ๊กเรียบร้อย..")                
+                    kk.sendMessage(to, "💙 ปิดเช็คสติ๊กเรียบร้อย..")                
 #==============================================================================#
-                elif text.lower() == 'Me':
+                elif text.lower() == 'แอด':
                     sendMessageWithMention(to, lineMID)
-                    line.sendContact(to, lineMID)
+                    ki.sendContact(to, lineMID)
                 elif text.lower() == 'ผู้สร้าง':
                     sendMessageWithMention(to, lineMID)
-                    line.sendContact(to, "ue32b11986d8e9e5cf70b642cf7ba88ff")
+                    kk.sendContact(to, "ue32b11986d8e9e5cf70b642cf7ba88ff")
                 elif text.lower() == 'มิส':
-                    line.sendMessage(msg.to,"[MID]\n" +  lineMID)
+                    kc.sendMessage(msg.to,"[MID]\n" +  lineMID)
                 elif text.lower() == 'ชื่อ':
                     me = line.getContact(lineMID)
-                    line.sendMessage(msg.to,"[DisplayName]\n" + me.displayName)
+                    ke.sendMessage(msg.to,"[DisplayName]\n" + me.displayName)
                 elif text.lower() == 'ตัส':
                     me = line.getContact(lineMID)
-                    line.sendMessage(msg.to,"[StatusMessage]\n" + me.statusMessage)
+                    ki.sendMessage(msg.to,"[StatusMessage]\n" + me.statusMessage)
                 elif text.lower() == 'รูป':
                     me = line.getContact(lineMID)
-                    line.sendImageWithURL(msg.to,"http://dl.profile.line-cdn.net/" + me.pictureStatus)
+                    kk.sendImageWithURL(msg.to,"http://dl.profile.line-cdn.net/" + me.pictureStatus)
                 elif text.lower() == 'วีดีโอ':
                     me = line.getContact(lineMID)
-                    line.sendVideoWithURL(msg.to,"http://dl.profile.line-cdn.net/" + me.pictureStatus + "/vp")
+                    kc.sendVideoWithURL(msg.to,"http://dl.profile.line-cdn.net/" + me.pictureStatus + "/vp")
                 elif text.lower() == 'ปก':
                     me = line.getContact(lineMID)
                     cover = line.getProfileCoverURL(lineMID)    
-                    line.sendImageWithURL(msg.to, cover)
+                    ke.sendImageWithURL(msg.to, cover)
                 elif msg.text.lower().startswith("คท "):
                     if 'MENTION' in list(msg.contentMetadata.keys())!= None:
                         names = re.findall(r'@(\w+)', text)
