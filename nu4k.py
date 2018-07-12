@@ -20,21 +20,21 @@ botStart = time.time()
 #==============================================================================#
 line = LINE('jon1bot2018@gmail.com','nunu_kap2018')
 #line = LINE()
-line.log("Auth Token : " + str(line.authToken))
-line.log("Timeline Token : " + str(line.tl.channelAccessToken))
+#line.log("Auth Token : " + str(line.authToken))
+#line.log("Timeline Token : " + str(line.tl.channelAccessToken))
 
 #ki = LINE()
-ki = LINE("bot5nu2018@gmail.com","nunu_kap2018")
-ki.log("Auth Token : " + str(ki.authToken))
-ki.log("Timeline Token : " + str(ki.tl.channelAccessToken))
+#ki = LINE("bot5nu2018@gmail.com","nunu_kap2018")
+#ki.log("Auth Token : " + str(ki.authToken))
+#ki.log("Timeline Token : " + str(ki.tl.channelAccessToken))
 
 #kk = LINE()
-kk = LINE('bot1nu2018@gmail.com','nunu_kap2018')
-kk.log("Auth Token : " + str(kk.authToken))
-kk.log("Timeline Token : " + str(kk.tl.channelAccessToken))
+#kk = LINE('bot1nu2018@gmail.com','nunu_kap2018')
+#kk.log("Auth Token : " + str(kk.authToken))
+#kk.log("Timeline Token : " + str(kk.tl.channelAccessToken))
 
 #kc = LINE()
-kc = LINE('bot2nu2018@gmail.com','nunu_kap2018')
+#kc = LINE('bot2nu2018@gmail.com','nunu_kap2018')
 kc.log("Auth Token : " + str(kc.authToken))
 kc.log("Timeline Token : " + str(kc.tl.channelAccessToken))
 
@@ -4745,9 +4745,18 @@ def lineBot(op):
                 if msg.text in ["กำ","กำนะ","กำหำ","กำหอย"]:
                     line.sendMessage(msg.to,"มากำคับ..😁😁")
                     line.sendMessage(msg.to,"แต่อย่ากำแรงนะ มันเจ็บ")				
+                if msg.text in ["มอง","มองเเรง","มองบน"]:
+                    line.sendMessage(msg.to,"มองทำไม...")
+                    line.sendMessage(msg.to,"เดียวทิ่มตาบอดเลย")
+		if msg.text in ["55","555","5555","55555","555555"]:
+                    line.sendMessage(msg.to,"ขรรมไรคับ..")
+                    line.sendMessage(msg.to,"ขรรมด้วยคนสิ..ฮ่าาา")				
+                if msg.text in [".","..","...","...."]:
+                    line.sendMessage(msg.to,"จุดทำไมครับ...")
+                    #line.sendMessage(msg.to,"แต่อย่ากำแรงนะ มันเจ็บ")				
               #  if msg.text in ["@@","แอด","แอดมิน","แอดมิ้น","หัวห้อง"]:
-               #     line.sendMessage(msg.to,"👇ผมรู้...นี้ไงแอดกลุ่ม👇")
-                #    line.sendMessage(msg.to,"Siriv10:グル作成者")				         
+                   # line.sendMessage(msg.to,"👇ผมรู้...นี้ไงแอดกลุ่ม👇")
+                   # line.sendMessage(msg.to,"Siriv10:グル作成者")		
                 if msg.text in dangerMessage:
                     random.choice(Rfu).kickoutFromGroup(receiver,[sender])
                     random.choice(Rfu).sendMessage(msg.to,"ตรวจพบคำสั่งของบอทลบกลุ่ม จำเป็นต้องนำออกเพื่อความปลอดภัยของสมาชิก (｀・ω・´)")										
