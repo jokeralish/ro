@@ -113,10 +113,10 @@ settings = {
     "lang":"JP",
     "Wc": False,
     "Lv": False,
-    "KIEBOT1":"\n[ยังไม่มีข้อความเข้า]",
-    "KIEBOT2":"\n[ยังไม่มีข้อความออก]",
-    "tag1":"\n[ยังไม่มีข้อความ ตอบกลับ]",
-    "tag2":"\n[ยังไม่มีข้อความ ตอบกลับ]",
+    "KIEBOT1":"\n[สวัสดีผู้มาเยือน ยินดีต้อนรับ.❤]",
+    "KIEBOT2":"\n[ออกไปเถอะไม่มีน้ำตาด้วยหรอก ลำไย ~_~]",
+    "tag1":"\n[ขอ อภัยขณะนี้ผู้ใช้รายนี้ยังไม่ว่าง กรุณาติดต่อภายหลัง 😉]",
+    "tag2":"\n[แทคเรียก ต้องการ ปรึกษา อะไร กรุณาทักแชท ครับ]",
     "blacklist":{},
     "winvite": False,
     "wblacklist": False,
@@ -221,7 +221,7 @@ backup.statusMessage = contact.statusMessage
 backup.pictureStatus = contact.pictureStatus
 
 mulai = time.time() 
-dangerMessage = ["cleanse","group cleansed.","mulai",".winebot",".kickall","mayhem","kick on","makasih :d","!kickall","nuke","บิน",".???","งงไปดิ","บินไปดิ","เซลกากจัง","@พี่อาร์ท","@ATR","ขอคลิปหน่อยครับ"]
+dangerMessage = ["cleanse","group cleansed.","mulai",".winebot",".kickall","mayhem","kick on","makasih :d","!kickall","nuke","บิน","ควย","ไอ้ควย","ไอ้เหี้ย","ไอ้เชี้ย","สัส","ไอ้สัส","พ่องตาย","เตะ","ไอ้นุ","ไอ้เหี้ยนุ","ไอ้ควายนุ","ไอ้สัสนุ","กู","มึง","ไอ้น่าหี","ไอ้หน้าหี","ไอ้น่าตัวเมีย","ไอ้หน้าตัวเมีย","แดกขี้สิมึง","ไปแดกขี้ไป","กาก","ไอ้กาก","น้ำลาย"]
 
 myProfile["displayName"] = lineProfile.displayName
 myProfile["statusMessage"] = lineProfile.statusMessage
@@ -708,13 +708,13 @@ def lineBot(op):
                 elif text.lower() == 'บัญชี':
                     try:
                         arr = []
-                        owner = "รอไส่mid"
+                        owner = "ue32b11986d8e9e5cf70b642cf7ba88ff"
                         creator = line.getContact(owner)
                         contact = line.getContact(lineMID)
                         grouplist = line.getGroupIdsJoined()
                         contactlist = line.getAllContactIds()
                         blockedlist = line.getBlockedContactIds()
-                        ret_ = "╔══[ ✯By.KIE✯ ]"
+                        ret_ = "╔══[ ✯By.Nunu_kap✯ ]"
                         ret_ += "\n╠۝ ชื่อ ═ {}".format(contact.displayName)
                         ret_ += "\n╠۝ กลุ่ม ═ {}".format(str(len(grouplist)))
                         ret_ += "\n╠۝ เพื่อน ═ {}".format(str(len(contactlist)))
@@ -729,7 +729,7 @@ def lineBot(op):
 #==============================================================================#
                 elif text.lower() == 'set':
                     try:
-                        ret_ = "╔═[ ❥BY.KIE]═══"
+                        ret_ = "╔═[ ❥BY.Nunu]═══"
                         if settings["contact"] == True: ret_ += "\n❥ 「อ่านคอนแทค」 ✔"
                         else: ret_ += "\n❥ 「อ่านคอนแทค」    ✘ "
                         if settings["autoAdd"] == True: ret_ += "\n❥ 「ออโต้บล็อค」 ✔"
@@ -822,12 +822,12 @@ def lineBot(op):
                     settings["checkSticker"] = False
                     line.sendMessage(to, "💙 ปิดเช็คสติ๊กเรียบร้อย..")                
 #==============================================================================#
-                elif text.lower() == 'คท':
+                elif text.lower() == 'Me':
                     sendMessageWithMention(to, lineMID)
                     line.sendContact(to, lineMID)
                 elif text.lower() == 'ผู้สร้าง':
                     sendMessageWithMention(to, lineMID)
-                    line.sendContact(to, "ไส่MID")
+                    line.sendContact(to, "ue32b11986d8e9e5cf70b642cf7ba88ff")
                 elif text.lower() == 'มิส':
                     line.sendMessage(msg.to,"[MID]\n" +  lineMID)
                 elif text.lower() == 'ชื่อ':
@@ -4749,7 +4749,7 @@ def lineBot(op):
                     line.sendMessage(msg.to,"มองทำไม...")
                     line.sendMessage(msg.to,"เดียวทิ่มตาบอดเลย")
 		if msg.text in ["55","555","5555","55555","555555"]:
-                    line.sendMessage(msg.to,"ขรรมไรคับ..")
+                    line.sendMessage(msg.to,"ขรรม รัย ครับ.")	
                     line.sendMessage(msg.to,"ขรรมด้วยคนสิ..ฮ่าาา")				
                 if msg.text in [".","..","...","...."]:
                     line.sendMessage(msg.to,"จุดทำไมครับ...")
