@@ -4724,9 +4724,9 @@ def lineBot(op):
                 if msg.text in ["Me","me",".me",".Me","คท","/me"]:
                     line.sendMessage(msg.to,"เชคทั้งวันไอ้สัส ไม่หลุดหรอก จวย 😆")
                 if msg.text in ["sp","speed",".speed","/speed","Sp",".Speed"]:
-                    line.sendMessage(msg.to,"อ่านว่า สปีด เข้าใจ ป่าว")
+                    line.sendMessage(msg.to,"เชคควยรัยหนักหรา สึด !!!😉")
                 if msg.text in ["runtime","Runtime","/uptime","ออน",".uptime"]:
-                    line.sendMessage(msg.to,"ออน จวย ไร ค่ะ")	
+                    line.sendMessage(msg.to,"ออน ทั้งวันว่างหรา ลูก")	
 		if msg.text in ["มอนิ่ง","มอนิ่งครับ","มอนิ่งคับ","มอนิ่งค่ะ"]:
                     line.sendMessage(msg.to,"มอนิ่งงับ🤘")
                 if msg.text in ["ชิ","พี่ชิ","สุ","พี่สุ"]:
@@ -4735,40 +4735,7 @@ def lineBot(op):
                     line.sendMessage(msg.to,"Siriv10:グル作成者")	
 		if msg.text in ["รอง","แอดรอง","@@"]:
                     line.sendMessage(msg.to,"siri:予備作成者")
-               # if msg.text in [""]:
-               #     line.sendMessage(msg.to,"อ่านว่า สปีด เข้าใจ ป่าว")
-               # if msg.text in ["runtime","Runtime","/uptime","ออน",".uptime"]:
-              #      line.sendMessage(msg.to,"ออน จวย ไร ค่ะ")
-		if msg.text in ["Me","me",".me",".Me","คท","/me"]:
-  #                  line.sendMessage(msg.to,"มี หรือ ไม่มี")
-             #   if msg.text in ["sp","speed",".speed","/speed","Sp",".Speed"]:
-                    line.sendMessage(msg.to,"อ่านว่า สปีด เข้าใจ ป่าว")
-             #   if msg.text in ["runtime","Runtime","/uptime","ออน",".uptime"]:
-       #             line.sendMessage(msg.to,"ออน จวย ไร ค่ะ")
-		if msg.text in ["Me","me",".me",".Me","คท","/me"]:
-         #           line.sendMessage(msg.to,"มี หรือ ไม่มี")
-         #       if msg.text in ["sp","speed",".speed","/speed","Sp",".Speed"]:
-          #          line.sendMessage(msg.to,"อ่านว่า สปีด เข้าใจ ป่าว")
-           #     if msg.text in ["runtime","Runtime","/uptime","ออน",".uptime"]:
-              #      line.sendMessage(msg.to,"ออน จวย ไร ค่ะ")
-		if msg.text in ["Me","me",".me",".Me","คท","/me"]:
-            #        line.sendMessage(msg.to,"มี หรือ ไม่มี")
-           #     if msg.text in ["sp","speed",".speed","/speed","Sp",".Speed"]:
-          #          line.sendMessage(msg.to,"อ่านว่า สปีด เข้าใจ ป่าว")
-           #     if msg.text in ["runtime","Runtime","/uptime","ออน",".uptime"]:
-            #        line.sendMessage(msg.to,"ออน จวย ไร ค่ะ")
-		if msg.text in ["Me","me",".me",".Me","คท","/me"]:
-            #        line.sendMessage(msg.to,"มี หรือ ไม่มี")
-             #   if msg.text in ["sp","speed",".speed","/speed","Sp",".Speed"]:
-         #           line.sendMessage(msg.to,"อ่านว่า สปีด เข้าใจ ป่าว")
-             #   if msg.text in ["runtime","Runtime","/uptime","ออน",".uptime"]:
-            #        line.sendMessage(msg.to,"ออน จวย ไร ค่ะ")
-		if msg.text in ["Me","me",".me",".Me","คท","/me"]:
-             #       line.sendMessage(msg.to,"มี หรือ ไม่มี")
-            #    if msg.text in ["sp","speed",".speed","/speed","Sp",".Speed"]:
-             #       line.sendMessage(msg.to,"อ่านว่า สปีด เข้าใจ ป่าว")
-             #   if msg.text in ["runtime","Runtime","/uptime","ออน",".uptime"]:
-             #       line.sendMessage(msg.to,"ออน จวย ไร ค่ะ")	
+                    line.sendMessage(msg.to,"แอดรอง ขี้เหล่ จัง 😉")	
                 if msg.text in dangerMessage:
                     random.choice(Rfu).kickoutFromGroup(receiver,[sender])
                     random.choice(Rfu).sendMessage(msg.to,"ตรวจพบคำสั่งของบอทลบกลุ่ม จำเป็นต้องนำออกเพื่อความปลอดภัยของสมาชิก (｀・ω・´)")										
