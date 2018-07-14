@@ -14,14 +14,19 @@ targets = []
 
 
 def NOTIFIED_INVITE_INTO_GROUP(op):
-    while True:
     try:
-        ops = poll.singleTrace(count=50)
-        if ops != None:
-            for op in ops:
-                if (op.type == 13):
-                    client.acceptGroupInvitation(op.param1)
-                    client.sendMessage(op.param1,'✟ℓຫຼี้छゆຸ۞>_<')                   
+        if op.param1 not in JoinedGroups:
+                client.acceptGroupInvitation(op.param1)
+                JoinedGroups.append(op.param1)
+                client.sendMessage(op.param1, "✟ℓຫຼี้छゆຸ۞>_<")
+  #  while True:
+ #   try:
+ #       ops = poll.singleTrace(count=50)
+ #       if ops != None:
+ #           for op in ops:
+ #               if (op.type == 13):
+ #                   client.acceptGroupInvitation(op.param1)
+ #                   client.sendMessage(op.param1,'✟ℓຫຼี้छゆຸ۞>_<')                   
     except Exception as e:
         print(e)
         print("\n\nNOTIFIED_INVITE_INTO_GROUP\n\n")
