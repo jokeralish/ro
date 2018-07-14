@@ -1,11 +1,11 @@
 from linepy import *
 import time
 
-cl = LINE('ไส่เมล','ไส่พาส')
+cl = LINE()
 #cl = LINE('EunGJlvq37U5sDc2Xjp1.r7LQgKdASAz0gOQcFUAR4q.zO3QLPsg5MJojipCN1goRhUWX/AxEOQ+3X2DfcenY04=')
 
-#cl.log("Auth Token : " + str(line.authToken))
-#cl.log("Timeline Token : " + str(line.tl.channelAccessToken))
+cl.log("Auth Token : " + str(cl.authToken))
+cl.log("Timeline Token : " + str(cl.tl.channelAccessToken))
 poll = OEPoll(cl)
 
 while True:
@@ -16,6 +16,7 @@ while True:
                 if (op.type == 13):
                     cl.acceptGroupInvitation(op.param1)
                     cl.sendMessage(op.param1,'สวัสดีฉันชื่อน้องสุ ฉันจะมา ยกเลิกค้างเชิน นะจ่ะๆ..')
+                    cl.sendMessage(op.param1,'cancelling~')
                 if (op.type == 25):
                     msg = op.message
                     if (msg.text.lower() == 'start!'):
@@ -31,7 +32,7 @@ while True:
                                 cl.cancelGroupInvitation(msg.to,[mid])
                             except Exception as e:
                                 pass
-                        cl.sendMessage(msg.to,'Done!\nline://ti/p/~nunu_kap123')
+                        cl.sendMessage(msg.to,'ยกเชินเสร็จแล้ว จ๊ะ!\nline://ti/p/~nunu_kap123')
                         cl.leaveGroup(msg.to)
                 poll.setRevision(op.revision)
     except Exception as e:
