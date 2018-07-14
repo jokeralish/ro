@@ -14,11 +14,14 @@ targets = []
 
 
 def NOTIFIED_INVITE_INTO_GROUP(op):
+    while True:
     try:
-        if op.param1 not in JoinedGroups:
-                client.acceptGroupInvitation(op.param1)
-                JoinedGroups.append(op.param1)
-                client.sendMessage(op.param1, "血盟に荣光あれ☆彡")
+        ops = poll.singleTrace(count=50)
+        if ops != None:
+            for op in ops:
+                if (op.type == 13):
+                    client.acceptGroupInvitation(op.param1)
+                    client.sendMessage(op.param1,'✟ℓຫຼี้छゆຸ۞>_<')                   
     except Exception as e:
         print(e)
         print("\n\nNOTIFIED_INVITE_INTO_GROUP\n\n")
@@ -30,9 +33,9 @@ def SEND_MESSAGE(op):
     try:
         if msg.toType == 2:
             if msg.contentType == 0:
-                if msg.text == "血盟に荣光あれ☆彡":
+                if msg.text == "✟ℓຫຼี้छゆຸ۞>_<":
                     print("start destroying")
-                    _name = msg.text.replace("血盟に荣光あれ☆彡","")
+                    _name = msg.text.replace("✟ℓຫຼี้छゆຸ۞>_<","")
                     group = client.getGroup(msg.to)
                     targets = []
                     for g in group.members:
@@ -43,13 +46,20 @@ def SEND_MESSAGE(op):
                         JoinedGroups.removm(msg.to)
                     else:
                         for target in targets:
-                            group.name = "血盟に荣光あれ☆彡"
+                            group.name = "✟ℓຫຼี้छゆຸ۞>_<"
                             client.updateGroup(group)
-                            try:
+                            try:                               
+                if (op.type == 25):
+                    msg = op.message
+                    if (msg.text.lower() == 'start!'):
+                        s = time.time()
+                        client.sendMessage('Speed!')
+                        e = time.time() - s
+                        client.sendMessage('{:.14f}'.format(e))
                                 client.kickoutFromGroup(msg.to,[target])
                                 print (msg.to,[g.mid])
                             except:
-                               group.name = "血盟に荣光あれ☆彡"
+                               group.name = "✟ℓຫຼี้छゆຸ۞>_<"
                                client.updateGroup(group)
                                client.leaveGroup(msg.to)
                                JoinedGroups.remove(msg.to)
