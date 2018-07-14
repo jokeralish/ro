@@ -21,50 +21,61 @@ import requests,urllib,json
 #ririn.log("Timeline Token : " + str(ririn.tl.channelAccessToken))
 
 #Khusus Login Token (Chrome)
+#ririn = LINE()
+#ririn.log("Auth Token : " + str(ririn.authToken))
+#ririn.log("Timeline Token : " + str(ririn.tl.channelAccessToken))
+
+#dna1 = LINE()
+#dna1.log("Auth Token : " + str(dna1.authToken))
+#dna1.log("Timeline Token : " + str(dna1.tl.channelAccessToken))
+
+#dna2 = LINE()
+#dna2.log("Auth Token : " + str(dna2.authToken))
+#dna2.log("Timeline Token : " + str(dna2.tl.channelAccessToken))
+
+#dna3 = LINE()
+#dna3.log("Auth Token : " + str(dna3.authToken))
+#dna3.log("Timeline Token : " + str(dna3.tl.channelAccessToken))
+
+#dna4 = LINE()
+#dna4.log("Auth Token : " + str(dna4.authToken))
+#dna4.log("Timeline Token : " + str(dna4.tl.channelAccessToken))
+
+#dna5 = LINE()
+#dna5.log("Auth Token : " + str(dna5.authToken))
+#dna5.log("Timeline Token : " + str(dna5.tl.channelAccessToken))
+
+#dna6 = LINE()
+#dna6.log("Auth Token : " + str(dna6.authToken))
+#dna6.log("Timeline Token : " + str(dna6.tl.channelAccessToken))
+
+#dna7 = LINE()
+#dna7.log("Auth Token : " + str(dna7.authToken))
+#dna7.log("Timeline Token : " + str(dna7.tl.channelAccessToken))
+
+#dna8 = LINE()
+#dna8.log("Auth Token : " + str(dna8.authToken))
+#dna8.log("Timeline Token : " + str(dna8.tl.channelAccessToken))
+
+#dna9 = LINE()
+#dna9.log("Auth Token : " + str(dna9.authToken))
+#dna9.log("Timeline Token : " + str(dna9.tl.channelAccessToken))
+
+#dna10 = LINE() #Ghost
+#dna10.log("Auth Token : " + str(dna10.authToken))
+#dna10.log("Timeline Token : " + str(dna10.tl.channelAccessToken))
+
 ririn = LINE()
-ririn.log("Auth Token : " + str(ririn.authToken))
-ririn.log("Timeline Token : " + str(ririn.tl.channelAccessToken))
-
 dna1 = LINE()
-dna1.log("Auth Token : " + str(dna1.authToken))
-dna1.log("Timeline Token : " + str(dna1.tl.channelAccessToken))
-
 dna2 = LINE()
-dna2.log("Auth Token : " + str(dna2.authToken))
-dna2.log("Timeline Token : " + str(dna2.tl.channelAccessToken))
-
 dna3 = LINE()
-dna3.log("Auth Token : " + str(dna3.authToken))
-dna3.log("Timeline Token : " + str(dna3.tl.channelAccessToken))
-
 dna4 = LINE()
-dna4.log("Auth Token : " + str(dna4.authToken))
-dna4.log("Timeline Token : " + str(dna4.tl.channelAccessToken))
-
 dna5 = LINE()
-dna5.log("Auth Token : " + str(dna5.authToken))
-dna5.log("Timeline Token : " + str(dna5.tl.channelAccessToken))
-
 dna6 = LINE()
-dna6.log("Auth Token : " + str(dna6.authToken))
-dna6.log("Timeline Token : " + str(dna6.tl.channelAccessToken))
-
 dna7 = LINE()
-dna7.log("Auth Token : " + str(dna7.authToken))
-dna7.log("Timeline Token : " + str(dna7.tl.channelAccessToken))
-
 dna8 = LINE()
-dna8.log("Auth Token : " + str(dna8.authToken))
-dna8.log("Timeline Token : " + str(dna8.tl.channelAccessToken))
-
 dna9 = LINE()
-dna9.log("Auth Token : " + str(dna9.authToken))
-dna9.log("Timeline Token : " + str(dna9.tl.channelAccessToken))
-
-dna10 = LINE() #Ghost
-dna10.log("Auth Token : " + str(dna10.authToken))
-dna10.log("Timeline Token : " + str(dna10.tl.channelAccessToken))
-
+dna10 = LINE()
 
 startBot = time.time()
 elapsed_time = format_timespan(time.time()-startBot)
