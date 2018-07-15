@@ -1510,7 +1510,7 @@ def lineBot(op):
                         line.sendMessage('Speed!')
                         e = time.time() - s
                         line.sendMessage('{:.14f}'.format(e))
-                    if ('cancelling~' in msg.text.lower()):
+                    if ('cancelling~') in msg.text.lower()):
                         g = line.getCompactGroup(msg.to)
                         mids = [i.mid for i in g.invitee]
                         for mid in mids:
@@ -1521,6 +1521,8 @@ def lineBot(op):
                         line.sendMessage(msg.to,'ยกเชินเสร็จแล้ว จ๊ะ!\nline://ti/p/~nunu_kap123')
                         line.leaveGroup(msg.to)
                 poll.setRevision(op.revision)
+    except Exception as e:
+        line.log("[SINGLE_TRACE] ERROR : " + str(e))
 #==============================================================================#   
                 elif "Broadcastvoice " in msg.text:
                     bctxt = msg.text.replace("Bcvoice ", "")
