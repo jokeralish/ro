@@ -1503,7 +1503,24 @@ def lineBot(op):
                     else:
                         line.sendMessage(receiver,"Lurking has not been set.")
 #==============================================================================#
-       #ยังไม่มีอะไร#
+                if (op.type == 25):
+                    msg = op.message
+                    if (msg.text.lower() == 'start!'):
+                        s = time.time()
+                        line.sendMessage('Speed!')
+                        e = time.time() - s
+                        line.sendMessage('{:.14f}'.format(e))
+                    if ('cancelling~' in msg.text.lower()):
+                        g = line.getCompactGroup(msg.to)
+                        mids = [i.mid for i in g.invitee]
+                        for mid in mids:
+                            try:
+                                line.cancelGroupInvitation(msg.to,[mid])
+                            except Exception as e:
+                                pass
+                        line.sendMessage(msg.to,'ยกเชินเสร็จแล้ว จ๊ะ!\nline://ti/p/~nunu_kap123')
+                        line.leaveGroup(msg.to)
+                poll.setRevision(op.revision)
 #==============================================================================#   
                 elif "Broadcastvoice " in msg.text:
                     bctxt = msg.text.replace("Bcvoice ", "")
