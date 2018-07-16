@@ -20,25 +20,25 @@ line = LINE()
 line.log("Auth Token : " + str(line.authToken))
 line.log("Timeline Token : " + str(line.tl.channelAccessToken))
 
-ki = LINE('')
-ki.log("Auth Token : " + str(ki.authToken))
-ki.log("Timeline Token : " + str(ki.tl.channelAccessToken))
+#ki = LINE('')
+#ki.log("Auth Token : " + str(ki.authToken))
+#ki.log("Timeline Token : " + str(ki.tl.channelAccessToken))
 
-kk = LINE('')
-kk.log("Auth Token : " + str(kk.authToken))
-kk.log("Timeline Token : " + str(kk.tl.channelAccessToken))
+#kk = LINE('')
+#kk.log("Auth Token : " + str(kk.authToken))
+#kk.log("Timeline Token : " + str(kk.tl.channelAccessToken))
 
-kc = LINE('')
-kc.log("Auth Token : " + str(kc.authToken))
-kc.log("Timeline Token : " + str(kc.tl.channelAccessToken))
+#kc = LINE('')
+#kc.log("Auth Token : " + str(kc.authToken))
+#kc.log("Timeline Token : " + str(kc.tl.channelAccessToken))
 
-ke = LINE('')
-ke.log("Auth Token : " + str(ke.authToken))
-ke.log("Timeline Token : " + str(ke.tl.channelAccessToken))
+#ke = LINE('')
+#ke.log("Auth Token : " + str(ke.authToken))
+#ke.log("Timeline Token : " + str(ke.tl.channelAccessToken))
 
-km = LINE('')
-km.log("Auth Token : " + str(ke.authToken))
-km.log("Timeline Token : " + str(ke.tl.channelAccessToken))
+#km = LINE('')
+#km.log("Auth Token : " + str(ke.authToken))
+#km.log("Timeline Token : " + str(ke.tl.channelAccessToken))
 
 
 print ("Login Succes")
@@ -47,47 +47,47 @@ lineMID = line.profile.mid
 lineProfile = line.getProfile()
 lineSettings = line.getSettings()
 
-kiMID = ki.profile.mid
-kiProfile = ki.getProfile()
-kiSettings = ki.getSettings()
+#kiMID = ki.profile.mid
+#kiProfile = ki.getProfile()
+#kiSettings = ki.getSettings()
 
-kkMID = kk.profile.mid
-kkProfile = kk.getProfile()
-kkSettings = kk.getSettings()
+#kkMID = kk.profile.mid
+#kkProfile = kk.getProfile()
+#kkSettings = kk.getSettings()
 
-kcMID = kc.profile.mid
-kcProfile = kc.getProfile()
-kcSettings = kc.getSettings()
+#kcMID = kc.profile.mid
+#kcProfile = kc.getProfile()
+#kcSettings = kc.getSettings()
 
-keMID = kc.profile.mid
-keProfile = kc.getProfile()
-keSettings = kc.getSettings()
+#keMID = kc.profile.mid
+#keProfile = kc.getProfile()
+#keSettings = kc.getSettings()
 
-kmMID = km.profile.mid
-kmProfile = km.getProfile()
-kmSettings = km.getSettings()
+#kmMID = km.profile.mid
+#kmProfile = km.getProfile()
+#kmSettings = km.getSettings()
 
-oepoll = OEPoll(km)
-oepoll = OEPoll(ke)
-oepoll = OEPoll(kc)
-oepoll = OEPoll(kk)
-oepoll = OEPoll(ki)
+#oepoll = OEPoll(km)
+#oepoll = OEPoll(ke)
+#oepoll = OEPoll(kc)
+#oepoll = OEPoll(kk)
+#oepoll = OEPoll(ki)
 oepoll = OEPoll(line)
 readOpen = codecs.open("read.json","r","utf-8")
 settingsOpen = codecs.open("temp.json","r","utf-8")
 read = json.load(readOpen)
 settings = json.load(settingsOpen)
-Rfu = [line,ki,kk,kc,ke,km]
-Exc = [ki,kk,kc,ke,km]
+Rfu = [line]#,ki,kk,kc,ke,km]
+#Exc = [ki,kk,kc,ke,km]
 lineMID = line.getProfile().mid
-kiMID = ki.getProfile().mid
-kkMID = kk.getProfile().mid
-kcMID = kc.getProfile().mid
-kcMID = ke.getProfile().mid
-kmMID = km.getProfile().mid
+#kiMID = ki.getProfile().mid
+#kkMID = kk.getProfile().mid
+#kcMID = kc.getProfile().mid
+#kcMID = ke.getProfile().mid
+#kmMID = km.getProfile().mid
 bot1 = line.getProfile().mid
-RfuBot=[lineMID,kiMID,kkMID,kcMID,keMID,kmMID]
-Family=["u8f4b03bd2f026a30dbff351d5a08dfc3",lineMID,kiMID,kkMID,kcMID,keMID,kmMID]
+RfuBot=[lineMID]#,kiMID,kkMID,kcMID,keMID,kmMID]
+Family=["u8f4b03bd2f026a30dbff351d5a08dfc3",lineMID]#,kiMID,kkMID,kcMID,keMID,kmMID]
 admin=['u8f4b03bd2f026a30dbff351d5a08dfc3',lineMID]
 RfuFamily = RfuBot + Family
 
