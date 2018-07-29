@@ -42,7 +42,7 @@ ki4.log("Auth Token : " + str(ki4.authToken))
 ki4.log("Timeline Token : " + str(ki4.tl.channelAccessToken))
 
 
-ki5 = LINE('')
+ki5 = LINE('su15nu2018@gmail.com','sunu2018')
 ki5.log("Auth Token : " + str(ki5.authToken))
 ki5.log("Timeline Token : " + str(ki5.tl.channelAccessToken))
 
@@ -2730,16 +2730,16 @@ def lineBot(op):
                         print ("Kicker Respon")
 
                 elif msg.text in ["บอท"]:
-                    ki1.sendMessage(msg.to,"1(⊙_⊙)─•۞✟ℓℓஆՁゆຸ۞•─")
-                    ki2.sendMessage(msg.to,"2(⊙_⊙)─•۞✟ℓℓஆՁゆຸ۞•─")
-                    ki3.sendMessage(msg.to,"3(⊙_⊙)─•۞✟ℓℓஆՁゆຸ۞•─")
-                    ki4.sendMessage(msg.to,"4(⊙_⊙)─•۞✟ℓℓஆՁゆຸ۞•─")   
-                    ki5.sendMessage(msg.to,"5(⊙_⊙)─•۞✟ℓℓஆՁゆຸ۞•─")
-                    ki6.sendMessage(msg.to,"6(⊙_⊙)─•۞✟ℓℓஆՁゆຸ۞•─")
-                    ki7.sendMessage(msg.to,"5(⊙_⊙)─•۞✟ℓℓஆՁゆຸ۞•─")
-                    ki8.sendMessage(msg.to,"8(⊙_⊙)─•۞✟ℓℓஆՁゆຸ۞•─") 
-                    ki9.sendMessage(msg.to,"9(⊙_⊙)─•۞✟ℓℓஆՁゆຸ۞•─")
-                    ki10.sendMessage(msg.to,"10(⊙_⊙)─•۞✟ℓℓஆՁゆຸ۞•─")
+                    ki1.sendMessage(msg.to,"1(⊙_⊙)")
+                    ki2.sendMessage(msg.to,"2(⊙_⊙)")
+                    ki3.sendMessage(msg.to,"3(⊙_⊙)")
+                    ki4.sendMessage(msg.to,"4(⊙_⊙)")   
+                    ki5.sendMessage(msg.to,"5(⊙_⊙)")
+                    ki6.sendMessage(msg.to,"6(⊙_⊙)")
+                    ki7.sendMessage(msg.to,"5(⊙_⊙)")
+                    ki8.sendMessage(msg.to,"8(⊙_⊙)") 
+                    ki9.sendMessage(msg.to,"9(⊙_⊙)")
+                    ki10.sendMessage(msg.to,"10(⊙_⊙)")
                 elif msg.text.lower().startswith("bitcoin"):
                    search = msg.text.split("bitcoin")
                    with requests.session() as web:
