@@ -145,8 +145,8 @@ kiMID = ki9.getProfile().mid
 kkMID = ki10.getProfile().mid
 bot1 = line.getProfile().mid
 RfuBot=[lineMID,ki1MID,ki2MID,ki3MID,ki4MID,ki5MID,ki6MID,ki7MID,ki8MID,ki9MID,ki10MID]
-Family=["ue32b11986d8e9e5cf70b642cf7ba88ff",lineMID,ki1MID,ki2MID,ki3MID,ki4MID,ki5MID,ki6MID,ki7MID,ki8MID,ki9MID,ki10MID,]
-admin=['ue32b11986d8e9e5cf70b642cf7ba88ff',lineMID]
+Family=["ud3a6bfda60a956cca0f58f2a14bae808",lineMID,ki1MID,ki2MID,ki3MID,ki4MID,ki5MID,ki6MID,ki7MID,ki8MID,ki9MID,ki10MID,]
+admin=['ud3a6bfda60a956cca0f58f2a14bae808',lineMID]
 RfuFamily = RfuBot + Family
 
 protectname = []
@@ -451,16 +451,16 @@ def myhelp():
                   "🍭「ปิดแสกน」ปิดหาคนแอบอ่าน" + "\n" + \
                   "🍭「.เชินแอด」เชินเจ้าของกลุ่ม" + "\n" + \
                   "🍭「.invitecancel」ยกเลิกค้างเชินในกลุ่ม" + "\n" + \
-                  "🍭「」" + "\n" + \
-                  "🍭「」" + "\n" + \
+                  "🍭「ลบแชท」" + "\n" + \
+                  "🍭「ลบแชทคิก」" + "\n" + \
                   "🍭「」" + "\n" + \
                   "🍭「」" + "\n" + \
                   "🍭「」" + "\n" + \
                   "🍭「」" + "\n" + \
                   "🌧🌦🌦🌦🌦🌦🌦🌦🌦🌦🌦🌦🌦🌦🌦🌦🌦" + "\n" + \
                   "۞~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~۞" + "\n" + \
-                  "❄「─•۞✟ℓℓஆՁゆຸ۞•─」❄" + "\n" + \
-                  "❄「@ID. http://line.me/ti/p/p2nGSe0XoX  」❄" + "\n" + \
+                  "❄「─•۞✟ℓℓஆՁՃิ۞•─」❄" + "\n" + \
+                  "❄「@ID. http://line.me/ti/p/p-susu000nunu 」❄" + "\n" + \
                   "❄════"
     return myHelp
 
@@ -745,7 +745,7 @@ def lineBot(op):
                     line.sendContact(to, lineMID)
                 elif text.lower() == 'ผู้สร้าง':
                     sendMessageWithMention(to, lineMID)
-                    line.sendContact(to, "ue32b11986d8e9e5cf70b642cf7ba88ff")
+                    line.sendContact(to, "ud3a6bfda60a956cca0f58f2a14bae808")
                 elif text.lower() == 'มิส':
                     line.sendMessage(msg.to,"[MID]\n" +  lineMID)
                 elif text.lower() == 'ชื่อ':
