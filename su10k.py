@@ -191,7 +191,7 @@ settings = {
     "pnharfbot": {},
     "pname": {},
     "pro_name": {},
-    "message":"คุณไม่สามารถเพิ่มเพื่อนได้/nเนื่องจากคุณไม่ได้รับอนุญาติจาก ─•۞✟ℓℓஆՁՃิ۞•─ /nขอบคุณที่แอดมา (◡‿◡✿) ",
+    "message":"คุณไม่สามารถเพิ่มเพื่อนได้/nเนื่องจากคุณไม่ได้รับอนุญาติจาก ─•۞✟ℓℓஆՁՃิ۞•─ /nขอบคุณที่แอดมา (◡‿◡✿)\n •*´¨`*•.¸¸.•*´¨`*•.¸¸.•*´¨`*•.¸¸.•*´¨`*•.¸¸.•\n::: (\_(\ …*…*…*…*…*…*…*…*…::::::::::::::\n*: (=’ :’) :: ออโต้บล็อค  นะจ๊ะ! :::::::::::::::::::::\n•.. (,(”)(”)¤…*…*…*…*…*…*…*…*…:::::::::::\n¸.•*´¨`*•.¸¸.•*´¨`*•.¸¸.•*´¨`*•.¸¸.•*´¨`*•.¸",
     "comment":"(◡‿◡✿)@ID.LINE [http://line.me/ti/p/p2nGSe0XoX] ",
     "userAgent": [
         "Mozilla/5.0 (X11; U; Linux i586; de; rv:5.0) Gecko/20100101 Firefox/5.0",
@@ -961,18 +961,40 @@ def lineBot(op):
                             line.sendMessage(msg.to, "Out Of Range!")
 						
 #==============================================================================#
-                        elif cmd == "อัพวีดีโอ" and sender == lineMID:
-                            settings['changeProfileVideo']['status'] = True
-                            settings['changeProfileVideo']['stage'] = 1
-                            sendMention(to, sender, "「 เปลียนวีดีโอสำเร็จแล้ว 」\n•", "\nSend video !")
-                        
 #===================================================================#
                 elif text.lower() == 'ดิสกู':
                             settings["changePicture"] = True
-                            line.sendMessage(to, "Silahkan kirim gambarnya")
+                            line.sendMessage(to, "ส่งรูปลงมา จ่ะ (^__^)..?")
                 elif text.lower() == 'ดิสคิก1':
                             settings["changePicture"] = True
-                            ki1.sendMessage(to, "Silahkan kirim gambarnya")
+                            ki1.sendMessage(to, "ส่งรูปลงมา จ่ะ (^__^)..?")
+                elif text.lower() == 'ดิสคิก2':
+                            settings["changePicture"] = True
+                            ki2.sendMessage(to, "ส่งรูปลงมา จ่ะ (^__^)..?")
+                elif text.lower() == 'ดิสคิก3':
+                            settings["changePicture"] = True
+                            ki3.sendMessage(to, "ส่งรูปลงมา จ่ะ (^__^)..?")
+                elif text.lower() == 'ดิสคิก4':
+                            settings["changePicture"] = True
+                            ki4.sendMessage(to, "ส่งรูปลงมา จ่ะ (^__^)..?")
+                elif text.lower() == 'ดิสคิก5':
+                            settings["changePicture"] = True
+                            ki5.sendMessage(to, "ส่งรูปลงมา จ่ะ (^__^)..?")
+                elif text.lower() == 'ดิสคิก6':
+                            settings["changePicture"] = True
+                            ki6.sendMessage(to, "ส่งรูปลงมา จ่ะ (^__^)..?")
+                elif text.lower() == 'ดิสคิก7':
+                            settings["changePicture"] = True
+                            ki7.sendMessage(to, "ส่งรูปลงมา จ่ะ (^__^)..?")
+                elif text.lower() == 'ดิสคิก8':
+                            settings["changePicture"] = True
+                            ki8.sendMessage(to, "ส่งรูปลงมา จ่ะ (^__^)..?")
+                elif text.lower() == 'ดิสคิก9':
+                            settings["changePicture"] = True
+                            ki9.sendMessage(to, "ส่งรูปลงมา จ่ะ (^__^)..?")
+                elif text.lower() == 'ดิสคิก10':
+                            settings["changePicture"] = True
+                            ki10.sendMessage(to, "ส่งรูปลงมา จ่ะ (^__^)..?")
                 elif text.lower() == 'ดิสกลุ่ม':
                             if msg.toType == 2:
                                 if to not in settings["changeGroupPicture"]:
