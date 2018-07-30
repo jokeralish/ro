@@ -4708,7 +4708,7 @@ def lineBot(op):
             if settings['leaveRoom'] == True:
                 line.leaveRoom(op.param1)      
 #=======================================================================================
-                elif msg.text.lower().startswith("urban "):
+           elif msg.text.lower().startswith("urban "):
                     sep = msg.text.split(" ")
                     judul = msg.text.replace(sep[0] + " ","")
                     url = "http://api.urbandictionary.com/v0/define?term="+str(judul)
