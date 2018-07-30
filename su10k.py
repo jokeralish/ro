@@ -4708,30 +4708,7 @@ def lineBot(op):
             if settings['leaveRoom'] == True:
                 line.leaveRoom(op.param1)      
 #====================================================================================
-                elif msg.text.lower().startswith("urban "):
-                    sep = msg.text.split(" ")
-                    judul = msg.text.replace(sep[0] + " ","")
-                    url = "http://api.urbandictionary.com/v0/define?term="+str(judul)
-                    with requests.session() as s:
-                        s.headers["User-Agent"] = random.choice(settings["userAgent"])
-                        r = s.get(url)
-                        data = r.text
-                        data = json.loads(data)
-                        y = "[ Result Urban ]"
-                        y += "\nTags: "+ data["tags"][0]
-                        y += ","+ data["tags"][1]
-                        y += ","+ data["tags"][2]
-                        y += ","+ data["tags"][3]
-                        y += ","+ data["tags"][4]
-                        y += ","+ data["tags"][5]
-                        y += ","+ data["tags"][6]
-                        y += ","+ data["tags"][7]
-                        y += "\n[1]\nAuthor: "+str(data["list"][0]["author"])
-                        y += "\nWord: "+str(data["list"][0]["word"])
-                        y += "\nLink: "+str(data["list"][0]["permalink"])
-                        y += "\nDefinition: "+str(data["list"][0]["definition"])
-                        y += "\nExample: "+str(data["list"][0]["example"])
-                        line.sendMessage(to, str(y))
+
             elif msg.contentType == 1:
                     if settings["changePictureProfile"] == True:
                         path = line.downloadObjectMsg(msg_id)
