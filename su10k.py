@@ -50,11 +50,11 @@ ki6 = LINE('su5nu2018@gmail.com','sunu2018')
 ki6.log("Auth Token : " + str(ki6.authToken))
 ki6.log("Timeline Token : " + str(ki6.tl.channelAccessToken))
 
-ki7 = LINE('su11nu2018@gmail.com','sunu2018')
+ki7 = LINE('su12nu2p18@gmail.com','sunu2018')
 ki7.log("Auth Token : " + str(ki7.authToken))
 ki7.log("Timeline Token : " + str(ki7.tl.channelAccessToken))
 
-ki8 = LINE('su12nu2018@gmail.com','sunu2018')
+ki8 = LINE('nu6bot2018@gmail.com','sunu2018')
 ki8.log("Auth Token : " + str(ki8.authToken))
 ki8.log("Timeline Token : " + str(ki8.tl.channelAccessToken))
 
