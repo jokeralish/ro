@@ -431,13 +431,13 @@ def myhelp():
                   "🍭「เลิกก็อปปี้」[กลับคืนค่าปกติ]" + "\n" + \
                   "🍭「รายงาน」[เช็คบอท]" + "\n" + \
                   "🍭「บอท」[เชคบอท]" + "\n" + \
-                  "🍭「ดิสใหม่」ดิสเรา" + "\n" + \
+                  "🍭「ดิสกู」ดิสเรา" + "\n" + \
                   "🍭「ชื่อใหม่: 」ชื่อเรา" + "\n" + \
                   "🍭「ตัสใหม่: 」ตัสเรา" + "\n" + \
                   "🍭「ตัสคิก: 」ตัสคิกทั้งหมด" + "\n" + \
                   "🍭「ชื่อคิก: 」ชื่อคิกทั้งหมด" + "\n" + \
-                  "🍭「ดิสคิก」ดิสคิกทั้งหมด" + "\n" + \
-                  "🍭「เปลี่ยนรูปกลุ่ม」เปลี่ยนรูปกลุ่ม" + "\n" + \
+                  "🍭「ดิสคิก1-10」ดิสคิกทั้งหมด" + "\n" + \
+                  "🍭「ดิสกลุ่ม」เปลี่ยนรูปกลุ่ม" + "\n" + \
                   "🍭「ลบรัน」[ลบรันเรา]" + "\n" + \
                   "🍭「ลบรันคิก」[ลบรันคิกเก้อทั้งหมด]" + "\n" + \
                   "🍭「.รัน @」[รันกลุ่มโดยแอดชื่อ]" + "\n" + \
@@ -486,11 +486,11 @@ def myhelp():
     
 def helpset():
     helpSet = "╭════[─•۞✟ℓℓஆՁゆຸ۞•─] " + "\n" + \
-    "║ว่างเปล่า]" + "\n" + \
-    "║ว่างเปล่า]" + "\n" + \
-    "║ว่างเปล่า]" + "\n" + \
-    "║ว่างเปล่า]" + "\n" + \
-    "║ว่างเปล่า]" + "\n" + \
+    "║แชร์เปิด/ปิด]" + "\n" + \
+    "║สแปม]" + "\n" + \
+    "║อัฟวีดีโอ]" + "\n" + \
+    "║คิกวีดีโอ]" + "\n" + \
+    "║วีดีโอคิก1-10]" + "\n" + \
     "║ว่างเปล่า]" + "\n" + \
     "║ว่างเปล่า" + "\n" + \
     "║ว่างเปล่า" + "\n" + \
@@ -586,6 +586,29 @@ def lineBot(op):
 #        if op.type == 24:
 #            if settings["autoLeave"] == True:
 #                line.leaveRoom(op.param1)
+        if op.type == 24:
+            print ("[ 24 ] ออกแชทรวมแล้ว")
+            if settings["autoLeave"] == True:
+                line.leaveRoom(op.param1)
+        if op.type == 25:
+            msg = op.message           
+            if msg.contentType == 13:
+                if settings["contact"] == True:
+                    #msg.contentType = 0
+                    if 'displayName' in msg.contentMetadata:
+                        contact = line.getContact(msg.contentMetadata["mid"])
+                        try:
+                            cu = line.getProfileCoverURL(msg.contentMetadata["mid"])
+                        except:
+                            cu = ""
+                        line.sendMessage(msg.to,"[ชื่อ]:\n" + msg.contentMetadata["displayName"] + "\n[mid]:\n" + msg.contentMetadata["mid"] + "\n[ตัส]:\n" + contact.statusMessage + "\n[โปรไฟล์]:\nhttp://dl.profile.line-cdn.net/" + contact.pictureStatus + "\n[หน้าปก]:\n" + str(cu))
+                    else:
+                        contact = line.getContact(msg.contentMetadata["mid"])
+                        try:
+                            cu = line.getProfileCoverURL(msg.contentMetadata["mid"])
+                        except:
+                            cu = ""
+                        line.sendMessage(msg.to,"[ชื่อ]:\n" + contact.displayName + "\n[mid]:\n" + msg.contentMetadata["mid"] + "\n[ตัส]:\n" + contact.statusMessage + "\n[โปรไฟล์]:\nhttp://dl.profile.line-cdn.net/" + contact.pictureStatus + "\n[หน้าปก]:\n" + str(cu))
 
         if op.type == 25:
             msg = op.message
@@ -604,6 +627,25 @@ def lineBot(op):
                 if text is None:
                     return
 #~~~~~~~~~~~~~~~~เขียนโดยนุจัง~~~~~~~~~~~~~~#
+ 
+                if "สแปม " in msg.text.lower():
+                    spl = re.split("สแปม ",msg.text,flags=re.IGNORECASE)
+                    if spl[0] == "":
+                        mts = spl[1]
+                        mtsl = mts.split()
+                        mtsTimeArg = len(mtsl) - 1
+                        mtsTime = mtsl[mtsTimeArg]
+                        del mtsl[mtsTimeArg]
+                        mtosay = " ".join(mtsl)
+                        global Rapid1To
+                        Rapid1To = msg.to
+                        RapidTime = mtsTime
+                        rmtosay = []
+                        for count in range(0,int(RapidTime)):
+                            rmtosay.insert(count,mtosay)
+                        p = Pool(20)
+                        p.map(Rapid1Say,rmtosay)
+                        p.close()
 #~~~~~~~~~~~~~~~~~~~เขียนโดย◇─•۞✟ℓℓஆՁゆຸ۞•─~~~~~~~~~~~~~~#
               
                 if text.lower() == 'คำสั่ง':
@@ -757,7 +799,13 @@ def lineBot(op):
                     line.sendMessage(to, "💙 เปิดเช็คสติ๊กเรียบร้อย..")
                 elif text.lower() == 'ปิดติ้ก':
                     settings["checkSticker"] = False
-                    line.sendMessage(to, "💙 ปิดเช็คสติ๊กเรียบร้อย..")                
+                    line.sendMessage(to, "💙 ปิดเช็คสติ๊กเรียบร้อย..")    
+                elif text.lower() == 'แชร์เปิด':
+                    settings["timeline"] = True
+                    line.sendMessage(to, "เปิดลิ้งแชร์แล้ว.")
+                elif text.lower() == 'แชร์ปิด':
+                    settings["timeline"] = False
+                    line.sendMessage(to, "ปิดลิ้งแชร์แล้ว.")
 #==============================================================================#
                 elif text.lower() == 'คท':
                     sendMessageWithMention(to, lineMID)
@@ -913,14 +961,19 @@ def lineBot(op):
                             line.sendMessage(msg.to, "Out Of Range!")
 						
 #==============================================================================#
+                        elif cmd == "อัพวีดีโอ" and sender == lineMID:
+                            settings['changeProfileVideo']['status'] = True
+                            settings['changeProfileVideo']['stage'] = 1
+                            sendMention(to, sender, "「 เปลียนวีดีโอสำเร็จแล้ว 」\n•", "\nSend video !")
+                        
 #===================================================================#
-                elif text.lower() == 'ดิสใหม่':
+                elif text.lower() == 'ดิสกู':
                             settings["changePicture"] = True
                             line.sendMessage(to, "Silahkan kirim gambarnya")
                 elif text.lower() == 'ดิสคิก1':
                             settings["changePicture"] = True
                             ki1.sendMessage(to, "Silahkan kirim gambarnya")
-                elif text.lower() == 'เปลี่ยนรูปกลุ่ม':
+                elif text.lower() == 'ดิสกลุ่ม':
                             if msg.toType == 2:
                                 if to not in settings["changeGroupPicture"]:
                                     settings["changeGroupPicture"].append(to)
@@ -4622,6 +4675,70 @@ def lineBot(op):
                         settings["blacklist"][op.param2] = True
             except:
                 pass
+#==============================================================================#
+        if op.type == 19:
+            if lineMID in op.param3:
+                settings["blacklist"][op.param2] = True
+        if op.type == 22:
+            if settings['leaveRoom'] == True:
+                line.leaveRoom(op.param1)              
+        if op.type == 24:
+            if settings['leaveRoom'] == True:
+                line.leaveRoom(op.param1)      
+#=======================================================================================
+                elif msg.text.lower().startswith("urban "):
+                    sep = msg.text.split(" ")
+                    judul = msg.text.replace(sep[0] + " ","")
+                    url = "http://api.urbandictionary.com/v0/define?term="+str(judul)
+                    with requests.session() as s:
+                        s.headers["User-Agent"] = random.choice(settings["userAgent"])
+                        r = s.get(url)
+                        data = r.text
+                        data = json.loads(data)
+                        y = "[ Result Urban ]"
+                        y += "\nTags: "+ data["tags"][0]
+                        y += ","+ data["tags"][1]
+                        y += ","+ data["tags"][2]
+                        y += ","+ data["tags"][3]
+                        y += ","+ data["tags"][4]
+                        y += ","+ data["tags"][5]
+                        y += ","+ data["tags"][6]
+                        y += ","+ data["tags"][7]
+                        y += "\n[1]\nAuthor: "+str(data["list"][0]["author"])
+                        y += "\nWord: "+str(data["list"][0]["word"])
+                        y += "\nLink: "+str(data["list"][0]["permalink"])
+                        y += "\nDefinition: "+str(data["list"][0]["definition"])
+                        y += "\nExample: "+str(data["list"][0]["example"])
+                        line.sendMessage(to, str(y))
+            elif msg.contentType == 1:
+                    if settings["changePictureProfile"] == True:
+                        path = line.downloadObjectMsg(msg_id)
+                        settings["changePictureProfile"] = False                                                                               
+                        line.updateProfilePicture(path)                                                                                        
+                        line.sendMessage(to, "เปลี่ยนโปรไฟล์สำเร็จแล้ว")
+                    if msg.toType == 2:
+                        if to in settings["changeGroupPicture"]:
+                            path = line.downloadObjectMsg(msg_id)
+                            settings["changeGroupPicture"].remove(to)
+                            line.updateGroupPicture(to, path)
+                            line.sendMessage(to, "เปลี่ยนรูปกลุ่มสำเร็จแล้ว")
+            elif msg.contentType == 7:
+                if settings["checkSticker"] == True:
+                    stk_id = msg.contentMetadata['STKID']
+                    stk_ver = msg.contentMetadata['STKVER']
+                    pkg_id = msg.contentMetadata['STKPKGID']
+                    ret_ = "╔══[ Sticker Info ]"
+                    ret_ += "\n╠ STICKER ID : {}".format(stk_id)
+                    ret_ += "\n╠ STICKER PACKAGES ID : {}".format(pkg_id)
+                    ret_ += "\n╠ STICKER VERSION : {}".format(stk_ver)
+                    ret_ += "\n╠ STICKER URL : line://shop/detail/{}".format(pkg_id)
+                    ret_ += "\n╚══[ Finish ]"
+                    line.sendMessage(to, str(ret_))
+            elif msg.contentType == 16:
+                if settings["timeline"] == True:
+                    msg.contentType = 0
+                    msg.text = "ลิ้งโพส\n" + msg.contentMetadata["postEndUrl"]
+                    line.sendMessage(msg.to,msg.text)              
 #==============================================================================#
         if op.type == 17:
             if op.param2 not in Family:
