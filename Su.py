@@ -392,7 +392,7 @@ def sendMessageWithMention(to, lineMID):
 
 def myhelp():
     myHelp = """   
-             ༄۞ꪶꪶꪣꪫꪊุ۞࿐      
+             ༄۞ℓຫຼี้छՃิ۞࿐      
        ────┅═ই۝ई═┅────
             วิธีใช้งานทั้งหมด
 ╔═════════════════════┓
@@ -488,7 +488,7 @@ def myhelp():
 
 def listgrup():
     listGrup = """
-      ༄۞ꪶꪶꪣꪫꪊุ۞࿐ 
+       ༄۞ℓຫຼี้छՃิ۞࿐
  ────┅═ই۝ई═┅────
       วิธีใช้งานที่2
 ╔══════════════┓
@@ -519,7 +519,7 @@ def listgrup():
 
 def socmedia():
     socMedia = """
-       ༄۞ꪶꪶꪣꪫꪊุ۞࿐
+       ༄۞ℓຫຼี้छՃิ۞࿐
  ────┅═ই۝ई═┅────
         วิธีใช้งานที่3
 ╔══════════════┓
@@ -537,7 +537,7 @@ def socmedia():
 def helpset():
     helpSet = """
     
-       ༄۞ꪶꪶꪣꪫꪊุ۞࿐
+        ༄۞ℓຫຼี้छՃิ۞࿐
   ────┅═ই۝ई═┅────
        วิธีใช้งานที่4
 ╔══════════════┓
@@ -572,7 +572,7 @@ def helpset():
 
 def helpsetting():
     helpSetting = """
-       ༄۞ꪶꪶꪣꪫꪊุ۞࿐
+       ༄۞ℓຫຼี้छՃิ۞࿐
  ────┅═ই۝ई═┅────
  
          วิธีใช้งาน5
@@ -603,7 +603,7 @@ def helpsetting():
 def helptexttospeech():
     helpTextToSpeech =   """
  
-        ༄۞ꪶꪶꪣꪫꪊุ۞࿐
+        ༄۞ℓຫຼี้छՃิ۞࿐
   ────┅═ই۝ई═┅────
   
 ╔══════════════┓
@@ -631,7 +631,7 @@ def helptexttospeech():
     
 def helplanguange():
     helpLanguange =    """
-       ༄۞ꪶꪶꪣꪫꪊุ۞࿐
+       ༄۞ℓຫຼี้छՃิ۞࿐
  ────┅═ই۝ई═┅────
  
 ╔══════════════┓
@@ -672,7 +672,7 @@ def helplanguange():
     
 def helpkicker():
     helpKicker = """
-        ༄۞ꪶꪶꪣꪫꪊุ۞࿐
+        ༄۞ℓຫຼี้छՃิ۞࿐
   ────┅═ই۝ई═┅────
   
          วิธีใช้งาน6
@@ -890,14 +890,14 @@ def lineBot(op):
                         grouplist = line.getGroupIdsJoined()
                         contactlist = line.getAllContactIds()
                         blockedlist = line.getBlockedContactIds()
-                        ret_ = "╔══[ ™❍✯͜͡RED™SAMURI✯͜͡❂➣]"
+                        ret_ = "╔══[ ༄۞ℓຫຼี้छՃิ۞࿐]"
                         ret_ += "\n╠۝ ชื่อ ═ {}".format(contact.displayName)
                         ret_ += "\n╠۝ กลุ่ม ═ {}".format(str(len(grouplist)))
                         ret_ += "\n╠۝ เพื่อน ═ {}".format(str(len(contactlist)))
                         ret_ += "\n╠۝ บล็อค ═ {}".format(str(len(blockedlist)))
                         ret_ += "\n╠══[สถานะ] ═ {}".format(contact.statusMessage)
                         ret_ += "\n╠۝ ผู้สร้าง ═ {}".format(creator.displayName)
-                        ret_ += "\n╚══[ ™❍✯͜͡RED™SAMURI✯͜͡❂➣]"
+                        ret_ += "\n╚══[ ༄۞ℓຫຼี้छՃิ۞࿐]"
                         line.sendContact(to, owner)
                         line.sendMessage(to, str(ret_))
                     except Exception as e:
