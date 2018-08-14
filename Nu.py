@@ -747,16 +747,16 @@ def lineBot(op):
                      if msg._from in admin:
                          _name = msg.contentMetadata["displayName"]
                          invite = msg.contentMetadata["mid"]
-                         groups = line.getGroup(msg.to)
+                         groups = ki1.getGroup(msg.to)
                          pending = groups.invitee
                          targets = []
                          for s in groups.members:
                              if _name in s.displayName:
-                                 line.sendText(msg.to,"-> " + _name + " \nทำการเชิญสำเร็จ")
+                                 ki1.sendText(msg.to,"-> " + _name + " \nทำการเชิญสำเร็จ")
                                  break
                              elif invite in settings["blacklist"]:
-                                 line.sendText(msg.to,"ขออภัย, " + _name + " บุคคนนี้อยู่ในรายการบัญชีดำ")
-                                 line.sendText(msg.to,"ใช้คำสั่ง!, \n➡ล้างดำ➡ดึง" )
+                                 ki1.sendText(msg.to,"ขออภัย, " + _name + " บุคคนนี้อยู่ในรายการบัญชีดำ")
+                                 ki1.sendText(msg.to,"ใช้คำสั่ง!, \n➡ล้างดำ➡ดึง" )
                                  break                             
                              else:
                                  targets.append(invite)
@@ -765,18 +765,18 @@ def lineBot(op):
                          else:
                              for target in targets:
                                  try:
-                                     line.findAndAddContactsByMid(target)
-                                     line.inviteIntoGroup(msg.to,[target])
-                                     line.sendText(msg.to,"เชิญคนนี้สำเร็จแล้ว : \n➡" + _name)
+                                     ki3.findAndAddContactsByMid(target)
+                                     ki3.inviteIntoGroup(msg.to,[target])
+                                     ki3.sendText(msg.to,"เชิญคนนี้สำเร็จแล้ว : \n➡" + _name)
                                      settings["winvite"] = False
                                      break
                                  except:
                                      try:
-                                         line.findAndAddContactsByMid(invite)
-                                         line.inviteIntoGroup(op.param1,[invite])
+                                         ki2.findAndAddContactsByMid(invite)
+                                         ki2.inviteIntoGroup(op.param1,[invite])
                                          settings["winvite"] = False
                                      except:
-                                         line.sendText(msg.to,"😧ตรวจพบข้อผิดพลาดที่ไม่ทราบสาเหตุ😩อาจเป็นได้ว่าบัญชีของคุณถูกแบนเชิญ😨")
+                                         ki2.sendText(msg.to,"😧ตรวจพบข้อผิดพลาดที่ไม่ทราบสาเหตุ😩อาจเป็นได้ว่าบัญชีของคุณถูกแบนเชิญ😨")
                                          settings["winvite"] = False
                                          break
                                          
@@ -2233,7 +2233,7 @@ def lineBot(op):
                     line.sendMessage(msg.to, t1 + txt + t2)						
                 elif msg.text in [".ดึง","ดึง"]:
                         settings["winvite"] = True
-                        line.sendMessage(msg.to,"send a contact to invite user")                            
+                        ki1.sendMessage(msg.to,"send a contact to invite user")                            
                 elif msg.text.lower() == "ยกเชิน":
                     if msg.toType == 2:
                         group = line.getGroup(msg.to)
