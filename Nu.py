@@ -1024,7 +1024,7 @@ def lineBot(op):
                     settings["unsendMessage"] = False
                     line.sendMessage(to, "unsendMessage disabled.")
 #==============================================================================#
-                elif text.lower() == 'Me','คท':
+                elif text.lower() == 'Me':
                     sendMessageWithMention(to, lineMID)
                     line.sendContact(to, lineMID)
                 elif text.lower() == 'ผส':
