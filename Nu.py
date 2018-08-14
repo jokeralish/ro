@@ -4886,10 +4886,10 @@ def lineBot(op):
             if settings ["Api"] == True:
             	if msg.text in ["กำ","กำนะ",".กำ","กำ.","กรรม"]:
                     line.sendMessage(msg.to,"จะกำอะไรหนักหนา รู้มั๊ยมันเจ็บ")
-            if settings ["Api"] == True:
-            	if msg.text in ["กำ","กำนะ",".กำ","กำ.","กรรม"]:
-                    line.sendMessage(msg.to,"จะกำอะไรหนักหนา รู้มั๊ยมันเจ็บ")
-                    line.sendMessage(msg.to,"จะกำอะไรหนักหนา รู้มั๊ยมันเจ็บ")
+     #       if settings ["Api"] == True:
+    #        	if msg.text in ["กำ","กำนะ",".กำ","กำ.","กรรม"]:
+    #                line.sendMessage(msg.to,"จะกำอะไรหนักหนา รู้มั๊ยมันเจ็บ")
+ #                   line.sendMessage(msg.to,"จะกำอะไรหนักหนา รู้มั๊ยมันเจ็บ")
         if op.type in [25,26]:
             msg = op.message
             if msg.contentType == 16:
