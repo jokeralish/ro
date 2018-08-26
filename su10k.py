@@ -18,7 +18,7 @@ from googletrans import Translator
 #==============================================================================#
 botStart = time.time()
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-line = LINE()
+line = LINE("sunu0734@gmail.com","sunu2018")
 print ("=ล็อคอินเชลแล้วของ=[༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐]==\n")
 ki1 = LINE("bot0su2019@gmail.com","nunu_kap2019")
 print ("=ล็อคอินคิก1แล้วของ=[༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐]==\n")
@@ -560,16 +560,6 @@ def lineBot(op):
         if op.type == 24:
             if settings["autoLeave"] == True:
                 line.leaveRoom(op.param1)
-		ki1.leaveRoom(op.param1)
-		ki2.leaveRoom(op.param1)
-		ki3.leaveRoom(op.param1)
-		ki4.leaveRoom(op.param1)
-		ki5.leaveRoom(op.param1)
-		ki6.leaveRoom(op.param1)
-		ki7.leaveRoom(op.param1)
-		ki8.leaveRoom(op.param1)
-		ki9.leaveRoom(op.param1)
-		ki10.leaveRoom(op.param1)
         if op.type == 25:
             msg = op.message           
             if msg.contentType == 13:
