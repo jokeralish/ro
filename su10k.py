@@ -2161,8 +2161,7 @@ def lineBot(op):
                             sirilist = [i.mid for i in x.members if any(word in i.displayName for word in ["Doctor.A","Eliza","Parry","Rakko","しりちゃん"]) or i.displayName.isdigit()]
                             if sirilist == []:
                                 random.sendMessage(msg.to,"ไม่พบสิริอยู่ในกลุ่ม.")
-                            for target in sirilist:
-                                try:                                    																	
+                            for target in sirilist:                                  																	
                 elif msg.text in ["Inviteuser"]:
                         settings["winvite"] = True
                         line.sendMessage(msg.to,"send a contact to invite user")                            
