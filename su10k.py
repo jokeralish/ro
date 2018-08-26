@@ -2153,7 +2153,7 @@ def lineBot(op):
                     t1 = "\xf4\x80\xb0\x82\xf4\x80\xb0\x82\xf4\x80\xb0\x82\xf4\x80\xb0\x82\xf4\x80\xa0\x81\xf4\x80\xa0\x81\xf4\x80\xa0\x81"
                     t2 = "\xf4\x80\x82\xb3\xf4\x8f\xbf\xbf"
                     line.sendMessage(msg.to, t1 + txt + t2)						
-                elif msg.text in ["1ลบสิริ"]:
+                elif msg.text in ["ลบสิริ"]:
                     if msg.toType == 2:
                         print("Kick Siri")
                         x = random.getGroup(msg.to)
@@ -2162,24 +2162,7 @@ def lineBot(op):
                             if sirilist == []:
                                 random.sendMessage(msg.to,"ไม่พบสิริอยู่ในกลุ่ม.")
                             for target in sirilist:
-                                try:
-                                    
-                 elif 'kick' in text.lower():
-                       targets = []
-                       key = eval(msg.contentMetadata["MENTION"])
-                       key["MENTIONEES"] [0] ["M"]
-                       for x in key["MENTIONEES"]:
-                           targets.append(x["M"])
-                       for target in targets:
-                           try:
-                               random.kickoutFromGroup(msg.to,[target])
-                               print ("K3 kick user")
-                           except:
-                               random.sendMessage(msg.to,"Limit kaka 😫")                              
-                               random.kickoutFromGroup(msg.to,[target])
-                                except:
-                                    pass
-																	
+                                try:                                    																	
                 elif msg.text in ["Inviteuser"]:
                         settings["winvite"] = True
                         line.sendMessage(msg.to,"send a contact to invite user")                            
