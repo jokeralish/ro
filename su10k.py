@@ -2142,12 +2142,6 @@ def lineBot(op):
                     settings["detectMention"] = False
                     random.sendMessage(msg.to,"แทคทั้งหมดปิดแล้ว..")
 
-                elif msg.text.lower().startswith("textig "):
-                    sep = msg.text.split(" ")
-                    textnya = msg.text.replace(sep[0] + " ","")
-                    urlnya = "http://chart.apis.google.com/chart?chs=480x80&cht=p3&chtt=" + textnya + "&chts=FFFFFF,70&chf=bg,s,000000"
-                    line.sendImageWithURL(msg.to, urlnya)
-
                 elif "kedip " in msg.text:
                     txt = msg.text.replace("kedip ", "")
                     t1 = "\xf4\x80\xb0\x82\xf4\x80\xb0\x82\xf4\x80\xb0\x82\xf4\x80\xb0\x82\xf4\x80\xa0\x81\xf4\x80\xa0\x81\xf4\x80\xa0\x81"
@@ -2161,16 +2155,59 @@ def lineBot(op):
                             sirilist = [i.mid for i in x.members if any(word in i.displayName for word in ["Doctor.A","Eliza","Parry","Rakko","しりちゃん"]) or i.displayName.isdigit()]
                             if sirilist == []:
                                 random.sendMessage(msg.to,"ไม่พบสิริอยู่ในกลุ่ม.")
-                            for target in sirilist:                                  																	
+                            for target in sirilist:
+                                try:
+                                    random.kickoutFromGroup(msg.to,[target])
+                                except:
+                                    pass
+                elif msg.text in ["2ลบสิริ"]:
+                    if msg.toType == 2:
+                        print("Kick Siri")
+                        x = ki2.getGroup(msg.to)
+                        if ki2MID in [i.mid for i in x.members]:
+                            sirilist = [i.mid for i in x.members if any(word in i.displayName for word in ["Doctor.A","Eliza","Parry","Rakko","しりちゃん"]) or i.displayName.isdigit()]
+                            if sirilist == []:
+                                ki2.sendMessage(msg.to,"ไม่พบสิริอยู่ในกลุ่ม.")
+                            for target in sirilist:
+                                try:
+                                    ki2.kickoutFromGroup(msg.to,[target])
+                                except:
+                                    pass
+                elif msg.text in ["3ลบสิริ"]:
+                    if msg.toType == 2:
+                        print("Kick Siri")
+                        x = ki3.getGroup(msg.to)
+                        if ki3MID in [i.mid for i in x.members]:
+                            sirilist = [i.mid for i in x.members if any(word in i.displayName for word in ["Doctor.A","Eliza","Parry","Rakko","しりちゃん"]) or i.displayName.isdigit()]
+                            if sirilist == []:
+                                ki3.sendMessage(msg.to,"ไม่พบสิริอยู่ในกลุ่ม.")
+                            for target in sirilist:
+                                try:
+                                    ki3.kickoutFromGroup(msg.to,[target])
+                                except:
+                                    pass
+                elif msg.text in ["4ลบสิริ"]:
+                    if msg.toType == 2:
+                        print("Kick Siri")
+                        x = ki4.getGroup(msg.to)
+                        if ki4MID in [i.mid for i in x.members]:
+                            sirilist = [i.mid for i in x.members if any(word in i.displayName for word in ["Doctor.A","Eliza","Parry","Rakko","しりちゃん"]) or i.displayName.isdigit()]
+                            if sirilist == []:
+                                ki4.sendMessage(msg.to,"ไม่พบสิริอยู่ในกลุ่ม.")
+                            for target in sirilist:
+                                try:
+                                    ki4.kickoutFromGroup(msg.to,[target])
+                                except:
+                                    pass									
                 elif msg.text in ["Inviteuser"]:
                         settings["winvite"] = True
                         line.sendMessage(msg.to,"send a contact to invite user")                            
                 elif msg.text.lower() == ".invitecancel":
                     if msg.toType == 2:
-                        group = random.getGroup(msg.to)
+                        group = line.getGroup(msg.to)
                         gMembMids = [contact.mid for contact in group.invitee]
                         for i in gMembMids:
-                            random.cancelGroupInvitation(msg.to,[i])
+                            line.cancelGroupInvitation(msg.to,[i])
                 elif msg.text.lower() == ".invitecancel2":
                     if msg.toType == 2:
                         group = line.getGroup(msg.to)
