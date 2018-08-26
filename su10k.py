@@ -20,25 +20,25 @@ botStart = time.time()
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 line = LINE()
 print ("=ล็อคอินเชลแล้วของ=[༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐]==\n")
-ki1 = LINE()
+ki1 = LINE("bot0su2019@gmail.com","nunu_kap2019")
 print ("=ล็อคอินคิก1แล้วของ=[༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐]==\n")
-ki2 = LINE()
+ki2 = LINE("bot1su2019@bmaol.com","nunu_kap2019")
 print ("=ล็อคอินคิก2แล้วของ=[༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐]==\n")
-ki3 = LINE()
+ki3 = LINE("bot2su2019@gmail.com","nunu_kap2019")
 print ("=ล็อคอินคิก3แล้วของ=[༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐]==\n")
-ki4 = LINE()
+ki4 = LINE("bot3su2019@gmail.com","nunu_kap2019")
 print ("=ล็อคอินคิก4แล้วของ=[༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐]==\n")
-ki5 = LINE()
+ki5 = LINE("bot4su2019@gmail.com","nunu_kap2019")
 print ("=ล็อคอินคิก5แล้วของ=[༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐]==\n")
-ki6 = LINE()
+ki6 = LINE("bot5su2019@gmail.com","nunu_kap2019")
 print ("=ล็อคอินคิก6แล้วของ=[༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐]==\n")
-ki7 = LINE()
+ki7 = LINE("bot6su2019@gmail.com","nunu_kap2019")
 print ("=ล็อคอินคิก7แล้วของ=[༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐]==\n")
-ki8 = LINE()
+ki8 = LINE("susu2bot2018@gmail.com","nunu_kap2019")
 print ("=ล็อคอินคิก8แล้วของ=[༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐]==\n")
-ki9 = LINE()
+ki9 = LINE("susu1bot2018@gmail.com","nunu_kap2019")
 print ("=ล็อคอินคิก9แล้วของ=[༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐]==\n")
-ki10 = LINE()
+ki10 = LINE("susu76917@gmail.com","nunu_kap2019")
 print ("=ล็อคอินคิก10แล้วของ=[༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐]==\n")
 print ("==[ระบบบอททั้งหมดทำงาน แล้ว]==")
 
@@ -2426,7 +2426,7 @@ def lineBot(op):
                             ki4.leaveGroup(i) 
                             print ("Kicker Leave All group")
 
-                elif "ชื่อใหม่: " in text.lower():
+                elif "ชื่อ: " in text.lower():
                     if msg._from in Family:
                         proses = text.split(": ")
                         string = text.replace(proses[0] + ": ","")
@@ -2436,7 +2436,7 @@ def lineBot(op):
                         line.sendMessage(msg.to,"Update to " + string)
                         print ("Update Name")
 
-                elif "ตัสใหม่: " in msg.text.lower():
+                elif "ตัส: " in msg.text.lower():
                     if msg._from in Family:
                         proses = text.split(": ")
                         string = text.replace(proses[0] + ": ","")
@@ -2591,16 +2591,16 @@ def lineBot(op):
                         profile_H.displayName = string
                         profile_I.displayName = string
                         profile_J.displayName = string
-                        ki.updateProfile(profile_A)
-                        kk.updateProfile(profile_B)
-                        kc.updateProfile(profile_C)
-                        ke.updateProfile(profile_D) 
-                        ki.updateProfile(profile_E)
-                        kk.updateProfile(profile_F)
-                        kc.updateProfile(profile_G)
-                        ke.updateProfile(profile_H) 
-                        ki.updateProfile(profile_I)
-                        kk.updateProfile(profile_J)
+                        ki1.updateProfile(profile_A)
+                        ki2.updateProfile(profile_B)
+                        ki3.updateProfile(profile_C)
+                        ki4.updateProfile(profile_D) 
+                        ki5.updateProfile(profile_E)
+                        ki6.updateProfile(profile_F)
+                        ki7.updateProfile(profile_G)
+                        ki8.updateProfile(profile_H) 
+                        ki9.updateProfile(profile_I)
+                        ki10.updateProfile(profile_J)
                         line.sendMessage(msg.to,"Update Name All Kicker to : " + string)
                         print ("Update Name All Kicker")
 
