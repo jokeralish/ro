@@ -2164,7 +2164,7 @@ def lineBot(op):
                             for target in sirilist:
                                 try:
                                     
-                elif 'kick' in text.lower():
+                 elif 'kick' in text.lower():
                        targets = []
                        key = eval(msg.contentMetadata["MENTION"])
                        key["MENTIONEES"] [0] ["M"]
