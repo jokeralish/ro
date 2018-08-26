@@ -787,9 +787,11 @@ def lineBot(op):
                     settings["timeline"] = False
                     line.sendMessage(to, "ปิดลิ้งแชร์แล้ว.")
 #==============================================================================#
+                elif cmd == "me" or cmd == "tes":
+                    line.sendMentionFooter(to, '「ผู้ใช้」\n', sender, "https://line.me/ti/p/~gg880.", "http://dl.profile.line-cdn.net/"+client.getContact(sender).pictureStatus, client.getContact(sender).displayName);client.sendMessage(to, client.getContact(sender).displayName, contentMetadata = {'previewUrl': 'http://dl.profile.line-cdn.net/'+client.getContact(sender).pictureStatus, 'i-installUrl': 'https://line.me/ti/p/~gg880.', 'type': 'mt', 'subText': "phuselfbot", 'a-installUrl': 'https://line.me/ti/p/~gg880.', 'a-installUrl': ' https://line.me/ti/p/~gg880.', 'a-packageName': 'com.spotify.music', 'countryCode': 'ID', 'a-linkUri': 'https://line.me/ti/p/~gg880.', 'i-linkUri': 'https://line.me/ti/p/~gg880.', 'id': 'mt000000000a6b79f9', 'text': 'Khie', 'linkUri': 'https://line.me/ti/p/~gg880'}, contentType=19)
                 elif text.lower() == 'คท':
-                    sendMessageWithMention(to, lineMID)
-                    line.sendContact(to, lineMID)
+                    line.sendMentionFooter(to, '「ผู้ใช้」\n', sender, "https://line.me/ti/p/~gg880.", "http://dl.profile.line-cdn.net/"+client.getContact(sender).pictureStatus, client.getContact(sender).displayName);client.sendMessage(to, client.getContact(sender).displayName, contentMetadata = {'previewUrl': 'http://dl.profile.line-cdn.net/'+client.getContact(sender).pictureStatus, 'i-installUrl': 'https://line.me/ti/p/~gg880.', 'type': 'mt', 'subText': "phuselfbot", 'a-installUrl': 'https://line.me/ti/p/~gg880.', 'a-installUrl': ' https://line.me/ti/p/~gg880.', 'a-packageName': 'com.spotify.music', 'countryCode': 'ID', 'a-linkUri': 'https://line.me/ti/p/~gg880.', 'i-linkUri': 'https://line.me/ti/p/~gg880.', 'id': 'mt000000000a6b79f9', 'text': 'Khie', 'linkUri': 'https://line.me/ti/p/~gg880'}, contentType=19)
+                #    line.sendContact(to, lineMID)
                 elif text.lower() == 'ผู้สร้าง':
                     sendMessageWithMention(to, lineMID)
                     line.sendContact(to, "ud3a6bfda60a956cca0f58f2a14bae808")
