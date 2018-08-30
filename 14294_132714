@@ -489,25 +489,6 @@ def lineBot(op):
                 if text is None:
                     return
 #~~~~~~~~~~~~~~~~เขียนโดยนุจัง~~~~~~~~~~~~~~#
- 
-                if "สแปม " in msg.text.lower():
-                    spl = re.split("สแปม ",msg.text,flags=re.IGNORECASE)
-                    if spl[0] == "":
-                        mts = spl[1]
-                        mtsl = mts.split()
-                        mtsTimeArg = len(mtsl) - 1
-                        mtsTime = mtsl[mtsTimeArg]
-                        del mtsl[mtsTimeArg]
-                        mtosay = " ".join(mtsl)
-                        global Rapid1To
-                        Rapid1To = msg.to
-                        RapidTime = mtsTime
-                        rmtosay = []
-                        for count in range(0,int(RapidTime)):
-                            rmtosay.insert(count,mtosay)
-                        p = Pool(20)
-                        p.map(Rapid1Say,rmtosay)
-                        p.close()
 #~~~~~~~~~~~~~~~~~~~เขียนโดย◇─•۞✟ℓℓஆՁゆຸ۞•─~~~~~~~~~~~~~~#
               
                 if text.lower() == 'คำสั่ง':
@@ -532,6 +513,7 @@ def lineBot(op):
                     line.sendMessage(to, "กำลังทดสอบ")
                     elapsed_time = time.time() - start
                     line.sendMessage(msg.to, "[ %s Seconds ] [ " % (elapsed_time) + str(int(round((time.time() - start) * 1000)))+" ms ]")
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[༄ꪶꪶꪣꪫꪊุ࿐ 💘༄ꪶꪶꪣꪫՃิ࿐]~~~~~~~~~~~~
                 elif text.lower() == 'sp':
                     start = time.time()
                     line.sendMessage(to, " กำลังทดสอบความเร็ว...")
