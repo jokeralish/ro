@@ -17,7 +17,20 @@ from googletrans import Translator
 
 #==============================================================================#
 botStart = time.time()
-
+#===========================~เขียนโดย༄۞ꪶꪶꪣꪫꪊุ۞࿐===================================================================================
+line = LINE()
+ki1 = LINE('nu2bot2018@gmail.com','nunu_kap2018')
+ki2 = LINE('nu3bot2018@gmail.com','nunu_kap2018')
+ki3 = LINE('nu4bot2018@gmail.com','nunu_kap2018')
+ki4 = LINE('nu8bot2018@gmail.com','nunu_kap2018')
+ki5 = LINE('nu10bot2018@gmail.com','nunu_kap2018')
+ki6 = LINE('bot1nu2018@gmail.com','nunu_kap2018')
+ki7 = LINE('bot2nu2018@gmail.com','nunu_kap2018')
+ki8 = LINE('bot3nu2018@gmail.com','nunu_kap2018')
+ki9 = LINE('nu11bot2018@gmail.com','nunu_kap2018')
+ki10 = LINE('nu9bot2018@gmail.com','nunu_kap2018')
+#~~~~~~~~~~~เขียนโดย༄۞ꪶꪶꪣꪫꪊุ۞࿐~~~~~~~~~~~~~~~~~~~~~~~~#
+print ("Login Succes")
 #~~~~~~~~~~~~~~~~~~[─•۞✟ℓℓஆՁゆຸ۞•─]~~~~~~~~~~~~~~~~#
 settings = {
     "autoAdd": True,
