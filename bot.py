@@ -15,8 +15,8 @@ while True:
             for op in ops:
                 if (op.type == 13):
                     cl.acceptGroupInvitation(op.param1)
-                    cl.sendMessage(op.param1,'By Alish joker add  To line.me/ti/p/~alish-joker')
-                    cl.sendMessage(op.param1,'cancelling member ~')
+                    cl.sendMessage(op.param1,'By Alish joker add  to line.me/ti/p/~alish-joker')
+                    cl.sendMessage(op.param1,'cancelling~')
                 if (op.type == 25):
                     msg = op.message
                     if (msg.text.lower() == 'start!'):
