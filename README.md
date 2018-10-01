@@ -1,6 +1,2 @@
-
-เป็นเพียงสคิปทดลองเท่านั้นไม่มีอะไร ยังไม่แก้api
-อยากได้ของจริงแอดมาเอาครับ
-[༄۞ꪶꪶꪣꪫꪊุ۞࿐]
-http://line.me/ti/p/t39FP9K59s
+Team iranian persian Team vhd.v alish.joker
 
