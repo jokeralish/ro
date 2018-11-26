@@ -1,9 +1,7 @@
 from linepy import *
 import time
 
-cl = LINE()
-#cl = LINE('EunGJlvq37U5sDc2Xjp1.r7LQgKdASAz0gOQcFUAR4q.zO3QLPsg5MJojipCN1goRhUWX/AxEOQ+3X2DfcenY04=')
-
+cl = LINE("EzRs9fmhRq64GaifW9ba.iWUy5hFsviofrvd8vX8GwG.sqmGzv357rewfD59KyV4LuFBZuII+EFhY++3QxQpk6g=")
 cl.log("Auth Token : " + str(cl.authToken))
 cl.log("Timeline Token : " + str(cl.tl.channelAccessToken))
 poll = OEPoll(cl)
@@ -15,7 +13,7 @@ while True:
             for op in ops:
                 if (op.type == 13):
                     cl.acceptGroupInvitation(op.param1)
-                    cl.sendMessage(op.param1,'By Alish joker add  to line.me/ti/p/~alish-joker')
+                    cl.sendMessage(op.param1,'By Alish joker add  to line.me/ti/p/~infoalish')
                     cl.sendMessage(op.param1,'cancelling~')
                 if (op.type == 25):
                     msg = op.message
@@ -32,7 +30,7 @@ while True:
                                 cl.cancelGroupInvitation(msg.to,[mid])
                             except Exception as e:
                                 pass
-                        cl.sendMessage(msg.to,'id bot!\nline://ti/p/~a.cancelbot\n admin line.me/ti/p/~alish-joker\n\n\n channel @linethemes\n\n\n @alihack011\n\n\n ᴘᴇʀsɪᴀɴ ᴛᴇᴀᴍ ᴠʜᴅ.ᴠ \n\n ᴀ.ᴊ')
+         #               cl.sendMessage(msg.to,'id bot!\nline://ti/p/~a.cancelbot\n admin line.me/ti/p/~alish-joker\n\n\n channel @linethemes\n\n\n @alihack011\n\n\n ᴘᴇʀsɪᴀɴ ᴛᴇᴀᴍ ᴠʜᴅ.ᴠ \n\n ᴀ.ᴊ')
                         cl.leaveGroup(msg.to)
                 poll.setRevision(op.revision)
     except Exception as e:
