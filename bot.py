@@ -1,7 +1,7 @@
 from linepy import *
 import time
 
-cl = LINE("EzRs9fmhRq64GaifW9ba.iWUy5hFsviofrvd8vX8GwG.sqmGzv357rewfD59KyV4LuFBZuII+EFhY++3QxQpk6g=")
+cl = LINE("EzoD1FXlvXWXGVOE81g5.MJRguDKPSKBCKRAlfaXAnq.WQL9R3qqBb7fKt/u8qRyn9CTmPkIycaxQAxcO59q8Oo=")
 cl.log("Auth Token : " + str(cl.authToken))
 cl.log("Timeline Token : " + str(cl.tl.channelAccessToken))
 poll = OEPoll(cl)
