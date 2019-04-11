@@ -13,7 +13,7 @@ while True:
             for op in ops:
                 if (op.type == 13):
                     cl.acceptGroupInvitation(op.param1)
-                    cl.sendMessage(op.param1,'سـڶآݦـ')
+                    cl.sendMessage(op.param1,'سلام من ربات کنسلی گروه هستم. تو اینستاگرام من رو فالوکنید ig.me/alishdev')
                     cl.sendMessage(op.param1,'cancelling~')
                 if (op.type == 25):
                     msg = op.message
@@ -30,7 +30,7 @@ while True:
                                 cl.cancelGroupInvitation(msg.to,[mid])
                             except Exception as e:
                                 pass
-                        cl.sendMessage(msg.to,' admin line.me/ti/p/~infoalish')
+                        cl.sendMessage(msg.to,'کانال لاین تم t.me/linethemes')
                         cl.leaveGroup(msg.to)
                 poll.setRevision(op.revision)
     except Exception as e:
