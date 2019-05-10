@@ -1,2 +1,2 @@
-Team iranian persian Team vhd.v alish.joker
 
+Bot By Alish Jocker ( Persian Team )
